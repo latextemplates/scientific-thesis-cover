@@ -56,6 +56,7 @@ This package supports the following options:
 - course: Type of study. May be set to one of the following values or arbitrary text in curly braces:
 	- `course=cs` will state that your course of study is Computer Science
 	- `course=se` will state that your course of study is Software Engineering
+	- `course=mcl` will state that your course of study is Master Computational Linguistics
 	- `course={Maschinelle Sprachverarbeitung}` will state that your course of study is Maschinelle Sprachverarbeitung
 
 - examiner: Your examiner. 
