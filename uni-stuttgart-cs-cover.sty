@@ -235,13 +235,11 @@
 % (contain code from old diplomtitel.sty)
 % ------------------------------
 \newcommand{\Titelblatt}{%
-	%\cleardoublepage
-  %
-  %\@TBrestonecolfalse
-  %\if@twocolumn \@TBrestonecoltrue \onecolumn \fi
-  %
-  %\setcounter{page}{-1}%
+  \cleardoublepage
+  \setcounter{page}{-1}%
 \begingroup
+	\newcommand{\isTwoColumn}{false}
+	\if@twocolumn \renewcommand{\isTwoColumn}{true} \onecolumn \fi
   \sf
   \pagestyle{empty}%
   \thispagestyle{empty}%
@@ -329,17 +327,16 @@
   \thispagestyle{empty}%
   %\cleardoublepage
   \clearpage
-  %\if@TBrestonecol \twocolumn \fi
+  \newcommand{\true}{true}
+  \ifthenelse{\equal{\isTwoColumn}{\true}}{\twocolumn}{}
   \pagenumbering{arabic}%
 \endgroup
 }
 
 \newcommand{\Versicherung}{
   \cleardoublepage
-  %
   \newcommand{\isTwoColumn}{false}
   \if@twocolumn \renewcommand{\isTwoColumn}{true} \onecolumn \fi
-  %
   \null
   \vskip 5cm\relax
 	\begin{center}
@@ -355,8 +352,7 @@
 			\hbox{\@labelSignature}
 		\end{minipage}
 	\end{center}
-  
   \clearpage
-  \def\true{true}
+  \newcommand{\true}{true}
   \ifthenelse{\equal{\isTwoColumn}{\true}}{\twocolumn}{}
 }
