@@ -32,7 +32,7 @@ Just include the package with all options specified:
 	language=english
 	]{uni-stuttgart-cs-cover}
 
-Afterwards you can creat the cover using `\Titelblatt` and get the affirmation text by using `\Versicherung`
+Afterwards you can create the cover using `\Titelblatt` and get the affirmation text by using `\Versicherung`
 
 ## Supported Options
 
