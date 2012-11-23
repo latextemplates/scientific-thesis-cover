@@ -13,6 +13,27 @@ This package is a replacement for the old diplomtitel.sty
 
 An example can be found in thesis.tex 
 
+## Usage 
+
+Just include the package with all options specified:
+
+    \usepackage[
+    title={Super relevant evaluation of new blackhole-generation method},
+    author={Max Musterjunge},
+    type=bachelor,
+    institute=iaas,
+    number=12345,
+    course=cs,
+	examiner={Prof.\ Dr.\ Hans Mustermann},
+	supervisor={Otto Normalverbraucher, M.Sc.},
+	startdate={2012/06/01},
+	enddate={2012/12/01},
+	crk={A.1, A.2},
+	language=english
+	]{uni-stuttgart-cs-cover}
+
+Afterwards you can creat the cover using `\Titelblatt` and get the affirmation text by using `\Versicherung`
+
 ## Supported Options
 
 This package supports the following options:
