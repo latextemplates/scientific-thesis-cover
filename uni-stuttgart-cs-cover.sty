@@ -337,23 +337,26 @@
 \newcommand{\Versicherung}{
   \cleardoublepage
   %
-  %\@TBrestonecolfalse
-  %\if@twocolumn \@TBrestonecoltrue \onecolumn \fi
+  \newcommand{\isTwoColumn}{false}
+  \if@twocolumn \renewcommand{\isTwoColumn}{true} \onecolumn \fi
   %
   \null
   \vskip 5cm\relax
-  \centering
-  \begin{minipage}[t]{10cm}
-      \hbox{\bf \@labelAffirmation}%
-      \vskip 1cm\relax
-      %\begin{flushleft}%
-        \@AffirmationText
-      %\end{flushleft}%
-      \vskip 4cm\relax
-      \hrulefill
-      \vskip .4\baselineskip
-      \hbox{\@labelSignature}
-    \end{minipage}
+	\begin{center}
+		\begin{minipage}[t]{10cm}
+			\hbox{\bf \@labelAffirmation}%
+			\vskip 1cm\relax
+			%\begin{flushleft}%
+			\@AffirmationText
+			%\end{flushleft}%
+			\vskip 4cm\relax
+			\hrulefill
+			\vskip .4\baselineskip
+			\hbox{\@labelSignature}
+		\end{minipage}
+	\end{center}
+  
   \clearpage
-  %\if@TBrestonecol \twocolumn \fi}
+  \def\true{true}
+  \ifthenelse{\equal{\isTwoColumn}{\true}}{\twocolumn}{}
 }
