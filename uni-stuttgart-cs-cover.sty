@@ -1,0 +1,349 @@
+% (C) 1990-1996 Bernd Raichle
+% (C) 2001 Timo Heiber, Matthias Papesch
+% (C) 2005 Steffen Keul
+% (C) 2006 Nils Radtke, Oliver Kopp
+% (C) 2007 Oliver Kopp
+% (C) 2012 Oliver Kopp, Kai Mindermann, Niklas Schnelle
+
+\NeedsTeXFormat{LaTeX2e}
+\newcommand{\pkgname}{uni-stuttgart-cs-cover}
+\ProvidesPackage{\pkgname}[2012/11/20 Cover and affirmation for work at the University of Stuttgart, Computer Science.]
+\typeout{Package: `\pkgname' v3.0}
+% ------------------------------
+% required packages
+% ------------------------------
+% kvoptions for key value options support
+\RequirePackage{kvoptions}
+\RequirePackage{ifthen}
+
+% ------------------------------
+% options
+% ------------------------------
+\SetupKeyvalOptions{
+	family=MCS,
+	prefix=MCS@
+}
+
+\DeclareStringOption[title not set]{title} % Title of the work
+\DeclareStringOption[author not set]{author}
+
+% possible are bachelor,master,study,diplom or plain text
+\DeclareStringOption[bachelor]{type}
+
+% possible are iaas,ipvs,fmi,iste,iti,iris,vis,visus,fac or plain text
+\DeclareStringOption[fac]{institute}
+\DeclareStringOption[not set]{number} % running number
+
+% possible are cs and se
+\DeclareStringOption[cs]{course}
+\DeclareStringOption[examiner not set]{examiner}
+\DeclareStringOption[supervisor not set]{supervisor} 
+\DeclareStringOption[startdate not set]{startdate} 
+\DeclareStringOption[enddate not set]{enddate}
+\DeclareStringOption[crk not set]{crk}
+
+\DeclareStringOption[german]{language}
+
+% ------------------------------
+% process options
+% ------------------------------
+\ProcessKeyvalOptions*
+
+% ------------------------------
+% define language specific labels:
+% ------------------------------
+% - labels are defined seperate for each language
+% - if language is not set, german is used
+% ------------------------------
+\def\labelsenglish{
+	\gdef\@labelExaminer{Examiner}%
+	%\gdef\@labelprueferin{Examiner}%
+	\gdef\@labelSupvervisor{Supervisor}%
+	%\gdef\@labelbetreuerin{Supervisor}%
+	\gdef\@labelCourse{Course of Study}%
+	\gdef\@labelStartdate{Commenced}%
+	\gdef\@labelEnddate{Completed}%
+	\gdef\@labelcrk{CR-Classification}%
+	\gdef\@labelUniversity{University of Stuttgart}%
+	\gdef\@labelDept{Faculty of Computer Science}%
+	
+	\gdef\@labelTypeStudy{Student Research Project}%
+	\gdef\@labelTypeDiplom{Diploma Thesis}%
+	\gdef\@labelTypeBachelor{Bachelor's Thesis}%
+	\gdef\@labelTypeMaster{Master's Thesis}%
+	
+	\gdef\@labelCourseCS{Computer Science}%
+	\gdef\@labelCourseSE{Software Engineering}%
+	
+	% institute names
+	\gdef\@labeliaas{Institute of Architecture of Application Systems}%
+	\gdef\@labelipvs{Institute of Parallel and Distributed Systems}%
+	\gdef\@labelfmi{Institute of Formal Methods in Computer Science}%
+	\gdef\@labeliste{Institute of Software Technology}%
+	\gdef\@labeliti{Institute of Computer Architecture and Computer Engineering}%
+	\gdef\@labeliris{Institute of Computer-aided Product Development Systems}%
+	\gdef\@labelvis{Institute of Visualization and Interactive Systems}%
+	\gdef\@labelvisus{Visualisation Research Center Stuttgart}%
+	
+	\gdef\@labelAffirmation{Decleration}%
+	\gdef\@AffirmationText{I declar that this thesis is the solely effort of the author.
+		I did not use any other sources and references than the listed ones.
+		I have marked all contained direct or indirect statements from other sources as such.
+		Neither this work nor significant parts of it were part of another review process.
+		I did not publish this work partially or completely yet.
+		The electronic copy is consistent with all submitted copies.
+	}
+	\gdef\@labelSignature{\ place, date, signature}
+}
+
+\def\labelsgerman{
+	\gdef\@labelExaminer{Prüfer}%
+	\gdef\@labelSupvervisor{Betreuer}%
+	\gdef\@labelCourse{Studiengang}%
+	\gdef\@labelStartdate{begonnen am}%
+	\gdef\@labelEnddate{beendet am}%
+	\gdef\@labelcrk{CR-Klassifikation}%
+	\gdef\@labelUniversity{Universität Stuttgart}%
+	\gdef\@labelDept{Fakultät Informatik, Elektrotechnik und Informationstechnik}%
+	
+	\gdef\@labelTypeStudy{Studienarbeit}%
+	\gdef\@labelTypeDiplom{Diplomarbeit}%
+	\gdef\@labelTypeBachelor{Bachelorarbeit}%
+	\gdef\@labelTypeMaster{Masterarbeit}%
+	
+	\gdef\@labelCourseCS{Informatik}%
+	\gdef\@labelCourseSE{Softwaretechnik}%
+	
+	% institute names
+	\gdef\@labeliaas{Institut für Architektur von Anwendungssystemen}%
+	\gdef\@labelipvs{Institut für Parallele und Verteilte Systeme}%
+	\gdef\@labelfmi{Institut für Formale Methoden der Informatik}%
+	\gdef\@labeliste{Institut für Softwaretechnologie}%
+	\gdef\@labeliti{Institut für Technische Informatik}%
+	\gdef\@labeliris{Institut für Rechnergestützte Ingenieursysteme}%
+	\gdef\@labelvis{Institut für Visualisierung und Interaktive Systeme}%
+	\gdef\@labelvisus{Visualisierungsinstitut der Universität Stuttgart}%
+	
+	\gdef\@labelAffirmation{Erklärung}%
+	\gdef\@AffirmationText{Ich versichere, diese Arbeit selbstständig verfasst zu haben.
+	Ich habe keine anderen als die angegebenen Quellen benutzt und alle wörtlich oder sinngemäß aus anderen Werken übernommene Aussagen als solche gekennzeichnet.
+	Weder diese Arbeit noch wesentliche Teile daraus waren bisher Gegenstand eines anderen Prüfungsverfahrens.
+	Ich habe diese Arbeit bisher weder teilweise noch vollständig veröffentlicht.
+	Das elektronische Exemplar stimmt mit allen eingereichten Exemplaren überein.
+	}
+	\gdef\@labelSignature{\ Ort, Datum, Unterschift}
+}
+
+% set those labels according to the set language
+\newcommand{\setLanguage{
+	\def\0{english}
+	\ifx\MCS@language\0
+		\labelsenglish
+	\else
+		\labelsgerman
+	\fi
+}}
+
+% set \@labelType if matched
+\newcommand{\setType}{
+	\gdef\@labelType{\MCS@type}
+	\def\1{\MCS@type}
+	% dont remove last two braces / empty else clause
+	\def\0{diplom}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeDiplom}}{}
+	\def\0{study}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeStudy}}{}
+	\def\0{bachelor}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeBachelor}}{}
+	\def\0{master}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeMaster}}{}
+}
+
+% ------------------------------		
+% Institute addresses
+% ------------------------------
+
+% general university address
+\gdef\@labelAddress{\@labelUniversity\\Universitätsstraße 38\\D--70569 Stuttgart}
+
+\newcommand{\setInstitute}{
+	% use specified text if institute does not match
+	\gdef\@labelInstitute{\MCS@institute}
+	
+	\def\1{\MCS@institute}
+	% dont remove last two braces / empty else clause
+	\def\0{ipvs}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labelipvs\\\@labelAddress}}{}
+	\def\0{iaas}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labeliaas\\\@labelAddress}}{}
+	\def\0{fmi}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labelfmi\\\@labelAddress}}{}
+	\def\0{iste}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labeliste\\\@labelAddress}}{}
+	\def\0{iti}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labeliti\\\@labelUniversity\\Pfaffenwaldring 47\\D--70569 Stuttgart}}{}
+	\def\0{iris}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labeliris\\\@labelAddress}}{}
+	\def\0{vis}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labelvis\\\@labelAddress}}{}
+	\def\0{visus}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labelvisus\\\@labelAddress}}{}
+	\def\0{fac}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labelDept\\\@labelAddress}}{}
+}
+
+% ------------------------------		
+% Evaluate course option and set course
+% ------------------------------
+\newcommand{\setCourse}{
+	% use specified text if course does not match
+	\gdef\@labelCourseValue{\MCS@course}
+	
+	\def\1{\MCS@course}
+	% dont remove last two braces / empty else clause
+	\def\0{cs}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelCourseValue{\@labelCourseCS}}{}
+	\def\0{se}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelCourseValue{\@labelCourseSE}}{}
+}
+
+% ------------------------------
+% evaluate options by calling those functions that set text accordingly
+% ------------------------------
+\setLanguage
+\setType
+\setInstitute
+\setCourse
+ 
+% ------------------------------		
+% helping commands
+% ------------------------------
+% - \umrandet
+% - \TBlabel
+% - \TBlist
+% ------------------------------
+\def\umrandet{\global\let\@umrandet=\fbox}
+\let\@umrandet\relax
+
+\newcommand{\TBlabel}[1]{\textbf{#1}\hfil}
+
+\newenvironment{TBlist}{%
+  \list{}{\labelwidth 45mm \leftmargin 70mm % alt: 35/60 mm
+          \rightmargin 20mm \let\makelabel\TBlabel}%
+}{\endlist}
+
+% ------------------------------
+% usable commands
+% ------------------------------
+% - \Titelblatt
+% - \Versicherung
+% (contain code from old diplomtitel.sty)
+% ------------------------------
+\newcommand{\Titelblatt}{%
+	%\cleardoublepage
+  %
+  %\@TBrestonecolfalse
+  %\if@twocolumn \@TBrestonecoltrue \onecolumn \fi
+  %
+  %\setcounter{page}{-1}%
+\begingroup
+  \sf
+  \pagestyle{empty}%
+  \thispagestyle{empty}%
+  %
+  \@normalsize \@setsize\normalsize{13.6pt}\xipt\@xipt
+  %
+  \frenchspacing    % besser, da viele Abk. (<- da ist schon eine)
+  \parskip=0pt\parindent=0pt\null
+  %
+  % Damit alles richtig funktioniert, mu"s der Ursprung auf die
+  %  tats"achliche linke obere Ecke des Blattes gelegt werden (ohne den
+  %  bekannten 1in Offset also).
+  %  Ausserdem werden die beiden Seitenr"ander auf 28mm + 4.5mm Falz
+  %  gesetzt, die Seitenh"ohe auf DIN A4-H"ohe.
+  %
+  \hsize=154mm       %% DIN A4: 210mm - 2*28mm
+  \columnwidth=\hsize \linewidth=\hsize
+  %
+  \dimen0=0pt
+  \advance\dimen0-\oddsidemargin
+  \advance\dimen0 2.6mm %% 
+  \advance\dimen0 4.5mm %% 
+ \hbox to 0pt{\kern\dimen0\vbox to\topskip{%
+  \dimen0=-1in
+  \advance\dimen0-\topmargin
+  \advance\dimen0-\headheight
+  \advance\dimen0-\headsep
+  \vskip\dimen0\relax
+  %
+
+  \vskip 20mm\relax %%%
+
+  \vbox to 70mm{
+  \begin{center}%
+    \@labelInstitute
+  \end{center}
+  \vfill}%
+
+  \vskip -4mm\relax
+  %%%%% ==> 155mm (Titel: 165mm/Autor: 195mm) von oben
+  %%% Die Box kann max. 100mm breit und 60mmm hoch sein,
+  %%% au"serdem wird noch ein Rand von mind. 2.5mm gelassen
+  \centerline{\fboxsep=0pt
+    \@umrandet{\hbox to 100mm{\hfil
+    \vbox to 60mm{\hsize=95mm\parindent=0pt
+      \vskip 10mm plus 30mm minus 7.5mm
+      \begin{center}\@setsize\large{14pt}\xiipt\@xiipt %%\large
+        \@labelType\ Nr.\,\MCS@number
+      \end{center}%
+      \vskip 12.5mm plus 12.5mm minus 10mm
+      \begin{center}\@setsize\LARGE{22pt}\xviipt\@xviipt %%\LARGE
+        \textbf{ \MCS@title}
+      \end{center}%
+      \vskip 10mm plus 10mm minus 7.5mm
+      \begin{center}\@setsize\large{14pt}\xiipt\@xiipt %%\large
+        \MCS@author
+      \end{center}%
+      \vskip 17.5mm plus 35mm minus 12.5mm}\hfil}}}%
+  \vskip 20mm %%%%%
+
+  \vbox to 15mm{%
+    \begin{TBlist}%
+      \item[\@labelCourse: ]\@labelCourseValue
+    \end{TBlist}%
+    \vfill}%
+  \vbox to 45mm{%
+    \begin{TBlist}%
+      \item[\@labelExaminer:]\MCS@examiner
+      \item[\@labelSupvervisor:]\MCS@supervisor
+    \end{TBlist}%
+    \vfill}%
+  \vbox to 70mm{%%%%% ==> 85 mm von oben
+    \begin{TBlist}%
+      \item[\@labelStartdate:]\MCS@startdate
+      \item[\@labelEnddate:]\MCS@enddate
+      \ifx\@crk\relax \else
+          \vskip 1.5\baselineskip
+          \item[\@labelcrk:]\MCS@crk
+      \fi
+    \end{TBlist}%
+    \vfill}%
+
+ \vss}\hss}%
+  %
+  \thispagestyle{empty}%
+  %\cleardoublepage
+  \clearpage
+  %\if@TBrestonecol \twocolumn \fi
+  \pagenumbering{arabic}%
+\endgroup
+}
+
+\newcommand{\Versicherung}{
+  \cleardoublepage
+  %
+  %\@TBrestonecolfalse
+  %\if@twocolumn \@TBrestonecoltrue \onecolumn \fi
+  %
+  \null
+  \vskip 5cm\relax
+  \centering
+  \begin{minipage}[t]{10cm}
+      \hbox{\bf \@labelAffirmation}%
+      \vskip 1cm\relax
+      %\begin{flushleft}%
+        \@AffirmationText
+      %\end{flushleft}%
+      \vskip 4cm\relax
+      \hrulefill
+      \vskip .4\baselineskip
+      \hbox{\@labelSignature}
+    \end{minipage}
+  \clearpage
+  %\if@TBrestonecol \twocolumn \fi}
+}
