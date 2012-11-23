@@ -59,6 +59,7 @@ This package supports the following options:
 	- `course=mcl` will state that your course of study is Master Computational Linguistics
 	- `course=msv` will state that your course of study is Maschinelle Sprachverarbeitung
 	- `course=bis` will state that your course of study is Business Information Systems
+	- `course=simtech` will state that your course of study is Simulation Technology
 	- `course={New Study course}` will state that your course of study is New Study course
 
 - examiner: Your examiner. 
