@@ -9,6 +9,12 @@ This package is a replacement for the old diplomtitel.sty
 - utf8 
 - options for all required text on the coverpage
 
+## Installation
+
+- Download `uni-stuttgart-cs-cover.sty` or 
+- Clone this repository with `git clone https://github.com/latextemplates/uni-stuttgart-cs-cover.git` or
+- Use it as git submodule via `git submodule add https://github.com/latextemplates/uni-stuttgart-cs-cover.git uni-stuttgart-cs-cover`
+
 ## Usage Example
 
 An example can be found in thesis.tex 
