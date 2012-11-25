@@ -327,8 +327,7 @@
  \vss}\hss}%
   %
   \thispagestyle{empty}%
-  %\cleardoublepage
-  \clearpage
+  \cleardoublepage % if twoside add a blank page after cover
   \newcommand{\true}{true}
   \ifthenelse{\equal{\isTwoColumn}{\true}}{\twocolumn}{}
   \pagenumbering{arabic}%
