@@ -75,7 +75,7 @@ This package supports the following options:
 	- `institute=vis` will state Institute of Visualization and Interactive Systems
 	- `institute=visus` will state Visualisation Research Center Stuttgart
 	- `institute=fac` will state Faculty of Computer Science
-	- `institute={Custom fictional institute\\ including address}` will state Custom fictional institute including address
+	- `institute={Custom fictional institute}` will state Custom fictional institute
 
 - number: Running number of work. May contain arbitrary text. Should contain the number you got for your work.
 	- `number=1234` will label your work to have number 1234
@@ -104,7 +104,11 @@ This package supports the following options:
 - crk: CR-Classification codes of your work. May be seperated by commas:
 	- `crk={A.1, A.2}`
 
+## Known Problems
 
+Multiline/Commands in option values are currently only supported if you load `kvoptions-patch` **before** the documentclass defintion like this:
 
+	\RequirePackage{kvoptions-patch}
+	\documentclass[twoside]{article}
 
 
