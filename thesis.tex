@@ -1,8 +1,9 @@
-\documentclass[11pt]{scrartcl}
+\documentclass[11pt,twoside]{scrartcl}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\usepackage{blindtext}
 
 \usepackage[
 	title={Super relevant evaluation of new blackhole-generation method},
@@ -13,26 +14,15 @@
 	course=se,
 	examiner={Prof.\ Dr.\ Hans Mustermann},
 	supervisor={Otto Normalverbraucher, M.Sc.},
-	startdate={2012/06/01},
-	enddate={2012/12/01},
-	crk={A.1, A.2},
+	startdate={2012-06-01},
+	enddate={2012-12-01},
+	crk={I.7.2},
 	language=german
 	]{uni-stuttgart-cs-cover}
 \begin{document}
-
-%% `\maketitle' oder `\Titelblatt' erzeugt automatisch ein Titelblatt
-%% mit den oben angegebenen Parametern.
-%% (Als Seiteneffekt wird die Seitennummer der folgenden Seite
-%% auf 1 zurueckgesetzt!)
-%
-\Titelblatt
-
-
-%% `Versicherung' erzeugt ein Blatt mit der Versicherung des
-%% Autors, nur die angegebenen Quellen benutzt zu haben.  Dieses
-%% Blatt muss noch unterschrieben werden.
-%
-%\pagestyle{empty}%% <<== fuer "normales" Dokument evtl. entfernen
-\Versicherung
-
+\Coverpage
+\section{Introduction}\blindtext[1]\newpage
+\section{Content}\blindmathpaper
+\section{Conclusion}\blindtext[1]
+\Affirmation
 \end{document}
