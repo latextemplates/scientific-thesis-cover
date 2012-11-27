@@ -17,10 +17,10 @@
 \RequirePackage{ifthen}
 
 % this package requires utf8 inputenc
-\def\USCCover@stop{\PackageWarningNoLine{newunicodechar}
+\def\USCCover@stop{\PackageWarningNoLine{\pkgname}
   {This package won't work without loading\MessageBreak
    `inputenc' or `inputenx' with the `utf8' option}%
-  \let\newunicodechar\@gobbletwo\endinput}
+  \let\pkgname\@gobbletwo\endinput}
 \@ifpackageloaded{inputenx}
   {\def\USCCover@tempa{inputenx}}
   {\@ifpackageloaded{inputenc}{\def\USCCover@tempa{inputenc}}{\USCCover@stop}}
