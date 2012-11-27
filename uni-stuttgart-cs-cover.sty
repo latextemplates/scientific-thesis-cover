@@ -6,9 +6,9 @@
 % (C) 2012 Oliver Kopp, Kai Mindermann, Niklas Schnelle
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\pkgname}{uni-stuttgart-cs-cover}
-\ProvidesPackage{\pkgname}[2012/11/20 Cover and affirmation for work at the University of Stuttgart, Computer Science.]
-\typeout{Package: `\pkgname' v3.0}
+\newcommand{\USCCover@Pgkname}{uni-stuttgart-cs-cover}
+\ProvidesPackage{\USCCover@Pgkname}[2012/11/20 Cover and affirmation for work at the University of Stuttgart, Computer Science.]
+\typeout{Package: `\USCCover@Pgkname' v3.0}
 % ------------------------------
 % required packages
 % ------------------------------
@@ -17,10 +17,10 @@
 \RequirePackage{ifthen}
 
 % this package requires utf8 inputenc
-\def\USCCover@stop{\PackageWarningNoLine{\pkgname}
+\def\USCCover@stop{\PackageWarningNoLine{\USCCover@Pgkname}
   {This package won't work without loading\MessageBreak
    `inputenc' or `inputenx' with the `utf8' option}%
-  \let\pkgname\@gobbletwo\endinput}
+  \let\USCCover@Pgkname\@gobbletwo\endinput}
 \@ifpackageloaded{inputenx}
   {\def\USCCover@tempa{inputenx}}
   {\@ifpackageloaded{inputenc}{\def\USCCover@tempa{inputenc}}{\USCCover@stop}}
@@ -151,7 +151,7 @@
 }
 
 % set those labels according to the set language
-\newcommand{\setLanguage{
+\newcommand{\USCCover@setLanguage{
 	\def\0{english}
 	\ifx\MCS@language\0
 		\labelsenglish
@@ -161,7 +161,7 @@
 }}
 
 % set \@labelType if matched
-\newcommand{\setType}{
+\newcommand{\USCCover@setType}{
 	\gdef\@labelType{\MCS@type}
 	\def\1{\MCS@type}
 	% dont remove last two braces / empty else clause
@@ -179,7 +179,7 @@
 % general university address
 \gdef\@labelAddress{\@labelUniversity\\Universitätsstraße 38\\D--70569 Stuttgart}
 
-\newcommand{\setInstitute}{
+\newcommand{\USCCover@setInstitute}{
 	% use specified text if institute does not match
 	\gdef\@labelInstitute{\MCS@institute}
 	
@@ -199,7 +199,7 @@
 % ------------------------------		
 % Evaluate course option and set course
 % ------------------------------
-\newcommand{\setCourse}{
+\newcommand{\USCCover@setCourse}{
 	% use specified text if course does not match
 	\gdef\@labelCourseValue{\MCS@course}
 	
@@ -216,26 +216,26 @@
 % ------------------------------
 % evaluate options by calling those functions that set text accordingly
 % ------------------------------
-\setLanguage
-\setType
-\setInstitute
-\setCourse
+\USCCover@setLanguage
+\USCCover@setType
+\USCCover@setInstitute
+\USCCover@setCourse
  
 % ------------------------------		
 % helping commands
 % ------------------------------
-% - \umrandet
-% - \TBlabel
-% - \TBlist
+% - \USCCover@umrandet
+% - \USCCover@TBlabel
+% - \USCCover@TBlist
 % ------------------------------
-\def\umrandet{\global\let\@umrandet=\fbox}
-\let\@umrandet\relax
+\def\USCCover@umrandet{\global\let\@USCCover@umrandet=\fbox}
+\let\@USCCover@umrandet\relax
 
-\newcommand{\TBlabel}[1]{\textbf{#1}\hfil}
+\newcommand{\USCCover@TBlabel}[1]{\textbf{#1}\hfil}
 
-\newenvironment{TBlist}{%
+\newenvironment{USCCover@TBlist}{%
   \list{}{\labelwidth 45mm \leftmargin 70mm % alt: 35/60 mm
-          \rightmargin 20mm \let\makelabel\TBlabel}%
+          \rightmargin 20mm \let\makelabel\USCCover@TBlabel}%
 }{\endlist}
 
 % ------------------------------
@@ -249,8 +249,8 @@
   \cleardoublepage
   \setcounter{page}{-1}%
 \begingroup
-	\newcommand{\isTwoColumn}{false}
-	\if@twocolumn \renewcommand{\isTwoColumn}{true} \onecolumn \fi
+	\newcommand{\USCCover@isTwoColumn}{false}
+	\if@twocolumn \renewcommand{\USCCover@isTwoColumn}{true} \onecolumn \fi
   \sf
   \pagestyle{empty}%
   \thispagestyle{empty}%
@@ -295,7 +295,7 @@
   %%% Die Box kann max. 100mm breit und 60mmm hoch sein,
   %%% au"serdem wird noch ein Rand von mind. 2.5mm gelassen
   \centerline{\fboxsep=0pt
-    \@umrandet{\hbox to 100mm{\hfil
+    \@USCCover@umrandet{\hbox to 100mm{\hfil
     \vbox to 60mm{\hsize=95mm\parindent=0pt
       \vskip 10mm plus 30mm minus 7.5mm
       \begin{center}\@setsize\large{14pt}\xiipt\@xiipt %%\large
@@ -313,25 +313,25 @@
   \vskip 20mm %%%%%
 
   \vbox to 15mm{%
-    \begin{TBlist}%
+    \begin{USCCover@TBlist}%
       \item[\@labelCourse: ]\@labelCourseValue
-    \end{TBlist}%
+    \end{USCCover@TBlist}%
     \vfill}%
   \vbox to 45mm{%
-    \begin{TBlist}%
+    \begin{USCCover@TBlist}%
       \item[\@labelExaminer:]\MCS@examiner
       \item[\@labelSupvervisor:]\MCS@supervisor
-    \end{TBlist}%
+    \end{USCCover@TBlist}%
     \vfill}%
   \vbox to 70mm{%%%%% ==> 85 mm von oben
-    \begin{TBlist}%
+    \begin{USCCover@TBlist}%
       \item[\@labelStartdate:]\MCS@startdate
       \item[\@labelEnddate:]\MCS@enddate
       \ifx\@crk\relax \else
           \vskip 1.5\baselineskip
           \item[\@labelcrk:]\MCS@crk
       \fi
-    \end{TBlist}%
+    \end{USCCover@TBlist}%
     \vfill}%
 
  \vss}\hss}%
@@ -339,16 +339,16 @@
   \thispagestyle{empty}%
   \cleardoublepage % if twoside add a blank page after cover
   \setcounter{page}{1}% set counter to start at 1 after the clear(double)page
-  \newcommand{\true}{true}
-  \ifthenelse{\equal{\isTwoColumn}{\true}}{\twocolumn}{}
+  \newcommand{\USCCover@true}{true}
+  \ifthenelse{\equal{\USCCover@isTwoColumn}{\USCCover@true}}{\twocolumn}{}
 \endgroup
 }
 \newcommand{\Coverpage}{\Titelblatt}
 
 \newcommand{\Versicherung}{
   \cleardoublepage
-  \newcommand{\isTwoColumn}{false}
-  \if@twocolumn \renewcommand{\isTwoColumn}{true} \onecolumn \fi
+  \newcommand{\USCCover@isTwoColumn}{false}
+  \if@twocolumn \renewcommand{\USCCover@isTwoColumn}{true} \onecolumn \fi
   \null
   \vskip 5cm\relax
 	\begin{center}
@@ -365,7 +365,7 @@
 		\end{minipage}
 	\end{center}
   \clearpage
-  \newcommand{\true}{true}
-  \ifthenelse{\equal{\isTwoColumn}{\true}}{\twocolumn}{}
+  \newcommand{\USCCover@true}{true}
+  \ifthenelse{\equal{\USCCover@isTwoColumn}{\USCCover@true}}{\twocolumn}{}
 }
 \newcommand{\Affirmation}{\Versicherung}
