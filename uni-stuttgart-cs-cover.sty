@@ -49,6 +49,8 @@
 \DeclareStringOption[crk not set]{crk}
 
 \DeclareStringOption[german]{language}
+\DeclareBoolOption[false]{setPageNumberToOne}
+\DeclareBoolOption[false]{setCoverPageNumberToMinusOne}
 
 % ------------------------------
 % process options
@@ -247,7 +249,7 @@
 % ------------------------------
 \newcommand{\Titelblatt}{%
   \cleardoublepage
-  \setcounter{page}{-1}%
+  \ifthenelse{\boolean{MCS@setCoverPageNumberToMinusOne}}{\setcounter{page}{-1}}{}
 \begingroup
 	\newcommand{\USCCover@isTwoColumn}{false}
 	\if@twocolumn \renewcommand{\USCCover@isTwoColumn}{true} \onecolumn \fi
@@ -338,7 +340,8 @@
   %
   \thispagestyle{empty}%
   \cleardoublepage % if twoside add a blank page after cover
-  \setcounter{page}{1}% set counter to start at 1 after the clear(double)page
+  % set counter to start at 1 after the clear(double)page
+  \ifthenelse{\boolean{MCS@setPageNumberToOne}}{\setcounter{page}{1}}{}
   \newcommand{\USCCover@true}{true}
   \ifthenelse{\equal{\USCCover@isTwoColumn}{\USCCover@true}}{\twocolumn}{}
 \endgroup

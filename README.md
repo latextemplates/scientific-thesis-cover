@@ -104,6 +104,11 @@ This package supports the following options:
 - crk: CR-Classification codes of your work. May be seperated by commas:
 	- `crk={A.1, A.2}`
 
+## Additional Optional Options
+
+- `setPageNumberToOne=true` will set the page after the cover to `1` (default false)
+- `setCoverPageNumberToMinusOne=true` will set `-1` as the page number for the cover page (default false)
+
 ## Known Problems
 
 Multiline/Commands in option values are currently only supported if you load `kvoptions-patch` **before** the documentclass defintion like this:
