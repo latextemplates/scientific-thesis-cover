@@ -17,7 +17,7 @@ This package is a replacement for the old diplomtitel.sty
 
 ## Usage Example
 
-An example can be found in thesis.tex 
+An example can be found in [thesis.tex](thesis.tex).
 
 ## Usage 
 
