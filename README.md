@@ -4,6 +4,11 @@ Unofficial LaTeX package for the required **cover page** for work at the Univers
 
 This package is a replacement for the old diplomtitel.sty
 
+If you  need a full-blown template, head over to https://github.com/latextemplates/uni-stuttgart-computer-science-template.
+An index page of available templates is available at http://latextemplates.github.io/.
+
+In case you find `uni-stuttgart-cs-cover.sty` outdated, fetch the latest version from https://github.com/latextemplates/uni-stuttgart-computer-science-template/blob/template/uni-stuttgart-cs-cover.sty.
+
 ## Features
 
 - utf8 
