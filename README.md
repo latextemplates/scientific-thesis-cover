@@ -33,7 +33,6 @@ Just include the package with all options specified:
     author={Max Musterjunge},
     type=bachelor,
     institute=iaas,
-    number=12345,
     course=cs,
 	examiner={Prof.\ Dr.\ Hans Mustermann},
 	supervisor={Otto Normalverbraucher, M.Sc.},
@@ -82,9 +81,6 @@ This package supports the following options:
 	- `institute=fac` will state Faculty of Computer Science
 	- `institute={Custom fictional institute}` will state Custom fictional institute
 
-- number: Running number of work. May contain arbitrary text. Should contain the number you got for your work.
-	- `number=1234` will label your work to have number 1234
-
 - course: Type of study. May be set to one of the following values or arbitrary text in curly braces:
 	- `course=cs` will state that your course of study is Computer Science
 	- `course=se` will state that your course of study is Software Engineering
@@ -111,6 +107,8 @@ This package supports the following options:
 
 ## Additional Optional Options
 
+- number: Running number of work. May contain arbitrary text. Should contain the number you got for your work.
+	- `number=1234` will label your work to have number 1234
 - `setPageNumberToOne=true` will set the page after the cover to `1` (default false)
 - `setCoverPageNumberToMinusOne=true` will set `-1` as the page number for the cover page (default false)
 
