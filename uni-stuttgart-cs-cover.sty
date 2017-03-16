@@ -54,7 +54,7 @@
 \DeclareStringOption[author not set]{author}
 \DeclareStringOption[bachelor]{type}
 \DeclareStringOption[fac]{institute}
-\DeclareStringOption[not set]{number} % running number
+\DeclareStringOption[]{number} % running number
 \DeclareStringOption[cs]{course}
 \DeclareStringOption[examiner not set]{examiner}
 \DeclareStringOption[supervisor not set]{supervisor} 
@@ -321,7 +321,11 @@
     \vbox to 60mm{\hsize=95mm\parindent=0pt
       \vskip 10mm plus 30mm minus 7.5mm
       \begin{center}\@setsize\large{14pt}\xiipt\@xiipt %%\large
-        \@labelType\ Nr.\,\MCS@number
+        	\ifx\MCS@number\empty
+				\@labelType
+			\else
+				\@labelType\ Nr.\,\MCS@number
+			\fi
       \end{center}%
       \vskip 12.5mm plus 12.5mm minus 10mm
       \begin{center}\@setsize\LARGE{22pt}\xviipt\@xviipt %%\LARGE
