@@ -115,6 +115,7 @@
 	\gdef\@labeliti{Institute of Computer Architecture and Computer Engineering}%
 	\gdef\@labeliris{Institute of Computer-aided Product Development Systems}%
 	\gdef\@labelvis{Institute for Visualization and Interactive Systems}%
+        \gdef\@labelsec{Institute of Information Security}%
 	
 	\gdef\@labelAffirmation{Declaration}%
 	\gdef\@AffirmationText{I hereby declare that the work presented in this thesis is entirely my own and that
@@ -161,6 +162,7 @@
 	\gdef\@labeliti{Institut für Technische Informatik}%
 	\gdef\@labeliris{Institut für Rechnergestützte Ingenieursysteme}%
 	\gdef\@labelvis{Institut für Visualisierung und Interaktive Systeme}%
+        \gdef\@labelsec{Institut für Informationssicherheit}%
 	
 	\gdef\@labelAffirmation{Erklärung}%
 	\gdef\@AffirmationText{Ich versichere, diese Arbeit selbstständig verfasst zu haben.
@@ -215,6 +217,7 @@
 	\def\0{iti}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labeliti\\\@labelUniversity\\Pfaffenwaldring 47\\D--70569 Stuttgart}}{}
 	\def\0{iris}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labeliris\\\@labelAddress}}{}
 	\def\0{vis}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labelvis\\\@labelAddress}}{}
+        \def\0{sec}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labelsec\\\@labelAddress}}{}
 	\def\0{fac}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelInstitute{\@labelDept\\\@labelAddress}}{}
 }
 
