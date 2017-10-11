@@ -1,13 +1,10 @@
-# About
+# Cover page for works at the University of Stuttgart, Computer Science
 
-Unofficial LaTeX package for the required **cover page** for work at the University of Stuttgart, Computer Science.
+Unofficial LaTeX package for the required **cover page** for works at the University of Stuttgart, Computer Science. This package is a replacement for the old `diplomtitel.sty`.
 
-This package is a replacement for the old diplomtitel.sty
+<p style="color:#00ccff">This is <strong>not recommended</strong> to be used.</p>
 
-If you  need a full-blown template, head over to https://github.com/latextemplates/uni-stuttgart-computer-science-template.
-An index page of available templates is available at http://latextemplates.github.io/.
-
-In case you find `uni-stuttgart-cs-cover.sty` outdated, fetch the latest version from https://github.com/latextemplates/uni-stuttgart-computer-science-template/blob/template/uni-stuttgart-cs-cover.sty.
+Please go to <https://github.com/latextemplates/scientific-thesis-template> and use the full thesis template.
 
 ## Features
 
@@ -120,4 +117,4 @@ Multiline/Commands in option values are currently only supported if you load `kv
 	\RequirePackage{kvoptions-patch}
 	\documentclass[twoside]{article}
 
-
+In case you find `uni-stuttgart-cs-cover.sty` outdated, fetch the latest version from https://github.com/latextemplates/uni-stuttgart-computer-science-template/blob/template/uni-stuttgart-cs-cover.sty.
