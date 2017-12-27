@@ -115,6 +115,14 @@ Multiline/Commands in option values are currently only supported if you load `kv
     \RequirePackage{kvoptions-patch}
     \documentclass[twoside]{article}
 
+## How to release
+
+1. Adapt `CHANGELOG.md`
+2. Adapt version and date in `scientific-thesis-cover.sty`
+3. Tag the release commit using `git tag`
+4. Push to GitHub
+5. Add CHANGELOG part to GitHub release manually, because [github-release-from-changelog](https://github.com/MoOx/github-release-from-changelog) currently works with `package.json`  only.
+
 ## License
 
 This work may be distributed and/or modified under the conditions of
