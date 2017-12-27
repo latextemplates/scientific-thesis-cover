@@ -1,5 +1,8 @@
 # Cover page for scientific works
 
+[![Build Status](https://circleci.com/gh/latextemplates/scientific-thesis-cover/tree/master.svg?style=shield)](https://circleci.com/gh/latextemplates/scientific-thesis-cover/)
+
+
 Institutions require a cover page and an affirmation at the end of the thesis.
 This work provides both.
 
