@@ -118,3 +118,28 @@ Multiline/Commands in option values are currently only supported if you load `kv
 	\documentclass[twoside]{article}
 
 In case you find `uni-stuttgart-cs-cover.sty` outdated, fetch the latest version from https://github.com/latextemplates/uni-stuttgart-computer-science-template/blob/template/uni-stuttgart-cs-cover.sty.
+
+## License
+
+This work may be distributed and/or modified under the conditions of
+the LaTeX Project Public License, version 1.3c of the license.
+The latest version of this license is in <http://www.latex-project.org/lppl.txt>
+and version 1.3c or later is part of all distributions of LaTeX
+version 2005/12/01 or later.
+
+This work has the LPPL maintenance status "maintained".
+
+The Current Maintainer and author of this work is Oliver Kopp.
+
+This work consists of the files refenums.sty, demo.tex, README, README.md, and test/demo-sec-param.tex.
+In case files are not listed here, but available at https://github.com/koppor/refenums, these additional files also form part of this work.
+
+### Contributors (incomplete list)
+
+Copyright 1990-1996 Bernd Raichle
+Copyright 2001 Timo Heiber, Matthias Papesch
+Copyright 2005 Steffen Keul
+Copyright 2006 Nils Radtke, Oliver Kopp
+Copyright 2007-2017 Oliver Kopp
+Copyright 2012-2017 Kai Mindermann
+Copyright 2012 Niklas Schnelle
