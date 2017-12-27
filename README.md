@@ -13,9 +13,9 @@ Please go to <https://github.com/latextemplates/scientific-thesis-template> and 
 
 ## Installation
 
-- Download `uni-stuttgart-cs-cover.sty` or 
-- Clone this repository with `git clone https://github.com/latextemplates/uni-stuttgart-cs-cover.git` or
-- Use it as git submodule via `git submodule add https://github.com/latextemplates/uni-stuttgart-cs-cover.git uni-stuttgart-cs-cover`
+- Download `scientific-thesis-cover.sty` or
+- Clone this repository with `git clone https://github.com/latextemplates/scientific-thesis-cover.git` or
+- Use it as git submodule via `git submodule add https://github.com/latextemplates/scientific-thesis-cover.git scientific-thesis-cover`
 
 ## Usage Example
 
@@ -37,7 +37,7 @@ Just include the package with all options specified:
 	enddate={2012/12/01},
 	crk={A.1, A.2},
 	language=english
-	]{uni-stuttgart-cs-cover}
+	]{scientific-thesis-cover}
 
 Afterwards you can create the cover using `\Coverpage` and get the affirmation text by using `\Affirmation`
 
@@ -116,8 +116,6 @@ Multiline/Commands in option values are currently only supported if you load `kv
 
 	\RequirePackage{kvoptions-patch}
 	\documentclass[twoside]{article}
-
-In case you find `uni-stuttgart-cs-cover.sty` outdated, fetch the latest version from https://github.com/latextemplates/uni-stuttgart-computer-science-template/blob/template/uni-stuttgart-cs-cover.sty.
 
 ## License
 
