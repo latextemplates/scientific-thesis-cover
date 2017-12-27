@@ -10,3 +10,5 @@ jobs:
        - run: cd tests && pdflatex TEST_english_twoside.tex
        - run: cd tests && pdflatex TEST_german_oneside.tex
        - run: cd tests && pdflatex TEST_german_twoside.tex
+       - run: mkdir build && cp README.md tests/*.pdf .github/_config.yml build/
+       - run: .circleci/deploy-ghpages.sh build/
