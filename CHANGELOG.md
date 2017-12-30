@@ -15,6 +15,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 - Renamed repository from uni-stuttgart-cs-cover to scientific-thesis-cover to stress that the cover also can be used at other institutions.
 - Numbers are now optional.
+- Cover is sans serif again.
 
 ### Removed
 
@@ -37,6 +38,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 ### Changed
 
 - Versioning on GitHub
+- Cover is typeset with serif font
 
 ## 3.0 - 2012-11-20
 
