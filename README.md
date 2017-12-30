@@ -5,10 +5,10 @@
 
 Institutions require a cover page and an affirmation at the end of the thesis.
 This work provides both.
-
-It stems from the [computer science institutes of the University of Stuttgart].
+It stems from the [computer science institutes of the University of Stuttgart], but is open to any university.
 
 In case you are looking for a **full thesis template** including a cover page and affirmation, please go to <https://github.com/latextemplates/scientific-thesis-template>.
+Please report issues concerning this package at the GitHub repository at <https://github.com/latextemplates/scientific-thesis-cover>.
 
 ## Features
 
@@ -60,12 +60,17 @@ This package supports the following options:
     - `author={Peter Lustig, Franz Josef, Vladimir Sixth}`
 
 - type: Type of work. May be set to one of the following values or arbitrary text in curly braces:
-    - `type=bachelor` will label your work as Bachelor's Thesis
+    - `type=bachelor` will label your work as Bachelor's Thesis.
+      Currently, the term regulations of the University of Stuttgart are in place.
+      It is assumed that you study a German Bachelor program.
+      Thus, even if you write in English, the type of your thesis is a "Bachelorarbeit".
+      In case you study in a different program (such as [INFOTECH]), please fill in the appropriate type of your thesis in curly brackets.
+      See below.
     - `type=master` will label your work as Masters's Thesis
     - `type=diplom` will label your work as Diploma Thesis
     - `type=study` will label your work as Student Research Project
     - `type=projectinf` will label your work as Projekt-INF
-    - `type={research project}` will label your work as research project
+    - Arbitrary strings are also possible: `type={research project}` will label your work as "research project"
     
 - institute: States for which institute you are doing this work. May be set to one of the following values or arbitrary text in curly braces:
     - `institute=iaas` will state Institute of Architecture of Application Systems
@@ -78,7 +83,7 @@ This package supports the following options:
     - `institute=visus` will state Visualisation Research Center Stuttgart
     - `institute=sec` will state Institute of Information Security
     - `institute=fac` will state Faculty of Computer Science
-    - `institute={Custom fictional institute}` will state Custom fictional institute
+    - Arbitrary strings are possible: `institute={Custom fictional institute}` will state Custom fictional institute
 
 - course: Type of study. May be set to one of the following values or arbitrary text in curly braces:
     - `course=cs` will state that your course of study is Computer Science
@@ -87,7 +92,7 @@ This package supports the following options:
     - `course=msv` will state that your course of study is Maschinelle Sprachverarbeitung
     - `course=bis` will state that your course of study is Business Information Systems
     - `course=simtech` will state that your course of study is Simulation Technology
-    - `course={New Study course}` will state that your course of study is New Study course
+    - Arbitrary strings are possible: `course={New Study course}` will state that your course of study is New Study course
 
 - examiner: Your examiner. 
     - `examiner={Prof.\ Dr.\ Hans Mustermann}`
@@ -96,12 +101,13 @@ This package supports the following options:
     - `supervisor={Otto Normalverbraucher, M.Sc.}`
 
 - startdate: Startdate of your work.
-    - `startdate={2012/06/01}`
+  Preferably ISO-8601. See <https://xkcd.com/1179/> and <https://www.explainxkcd.com/wiki/index.php/1179:_ISO_8601>.
+    - `startdate={2012-06-01}`
 
-- enddate: Enddate of your work.    
-    - `enddate={2012/12/01}`
+- enddate: Enddate of your work.
+    - `enddate={2012-12-01}`
 
-- crk: CR-Classification codes of your work. May be seperated by commas:
+- crk: CR-Classification codes of your work. May be separated by commas:
     - `crk={A.1, A.2}`
 
 ## Additional Optional Options
@@ -113,7 +119,7 @@ This package supports the following options:
 
 ## Known Problems
 
-Multiline/Commands in option values are currently only supported if you load `kvoptions-patch` **before** the documentclass defintion like this:
+Multiline/Commands in option values are currently only supported if you load `kvoptions-patch` **before** the documentclass definition like this:
 
     \RequirePackage{kvoptions-patch}
     \documentclass[twoside]{article}
@@ -143,11 +149,12 @@ This work has the LPPL maintenance status "maintained".
 
 The Current Maintainer and author of this work is Oliver Kopp.
 
-This work consists of the files refenums.sty, demo.tex, README, README.md, and test/demo-sec-param.tex.
-In case files are not listed here, but available at https://github.com/koppor/refenums, these additional files also form part of this work.
+This work consists of the files `scientific-thesis-cover.sty`, `demo.tex`, and `README.md`.
+In case files are not listed here, but available at <https://github.com/latextemplates/scientific-thesis-cover>, these additional files also form part of this work.
 
 ### Contributors (incomplete list)
 
 Bernd Raichle, Timo Heiber, Steffen Keul, Oliver Kopp, Kai Mindermann, Matthias Papesch, Nils Radtke, Niklas Schnelle
 
   [computer science institutes of the University of Stuttgart]: http://www.informatik.uni-stuttgart.de/index.en.html
+  [INFOTECH]: https://www.uni-stuttgart.de/infotech/
