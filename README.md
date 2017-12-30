@@ -125,6 +125,11 @@ Multiline/Commands in option values are currently only supported if you load `kv
 3. Tag the release commit using `git tag`
 4. Push to GitHub
 5. Add CHANGELOG part to GitHub release manually, because [github-release-from-changelog](https://github.com/MoOx/github-release-from-changelog) currently works with `package.json`  only.
+6. Publish to CTAN
+  - Windows: Patch `C:\MiKTeX\scripts\ctanify\ctanify`: Remove `-y` from `zip` command line arguments `zip -q -r -9 -y -m`.
+  - Run `pdflatex demo`
+  - Run `perl "C:\MiKTeX\scripts\ctanify\ctanify" README.md scientific-thesis-cover.sty demo.pdf`
+  - Go to <https://www.ctan.org/upload> and use `scientific-thesis-cover.tar.gz` as archive.
 
 ## License
 
@@ -143,12 +148,6 @@ In case files are not listed here, but available at https://github.com/koppor/re
 
 ### Contributors (incomplete list)
 
-Copyright 1990-1996 Bernd Raichle
-Copyright 2001 Timo Heiber, Matthias Papesch
-Copyright 2005 Steffen Keul
-Copyright 2006 Nils Radtke, Oliver Kopp
-Copyright 2007-2017 Oliver Kopp
-Copyright 2012-2017 Kai Mindermann
-Copyright 2012 Niklas Schnelle
+Bernd Raichle, Timo Heiber, Steffen Keul, Oliver Kopp, Kai Mindermann, Matthias Papesch, Nils Radtke, Niklas Schnelle
 
   [computer science institutes of the University of Stuttgart]: http://www.informatik.uni-stuttgart.de/index.en.html
