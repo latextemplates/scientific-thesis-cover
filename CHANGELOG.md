@@ -13,8 +13,8 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 ### Changed
 
-- Renamed repository from uni-stuttgart-cs-cover to scientific-thesis-cover to stress that the cover also can be used at other institutions
-- Numbers are now optional
+- Renamed repository from uni-stuttgart-cs-cover to scientific-thesis-cover to stress that the cover also can be used at other institutions.
+- Numbers are now optional.
 
 ### Removed
 
