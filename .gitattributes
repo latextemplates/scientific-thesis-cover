@@ -1,0 +1,5 @@
+# enforce unix line endings
+.git* eol=lf
+*.md eol=lf
+*.sty eol=lf
+*.tex eol=lf
