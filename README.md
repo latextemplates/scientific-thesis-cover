@@ -4,7 +4,7 @@
 
 
 Institutions require a cover page and an affirmation at the end of the thesis.
-This work provides both.
+This package provides both.
 It stems from the [computer science institutes of the University of Stuttgart], but is open to any university.
 
 In case you are looking for a **full thesis template** including a cover page and affirmation, please go to <https://github.com/latextemplates/scientific-thesis-template>.
@@ -136,6 +136,7 @@ Multiline/Commands in option values are currently only supported if you load `kv
   - Run `pdflatex demo`
   - Run `perl "C:\MiKTeX\scripts\ctanify\ctanify" README.md scientific-thesis-cover.sty demo.pdf`
   - Go to <https://www.ctan.org/upload> and use `scientific-thesis-cover.tar.gz` as archive.
+7. Adapt `CHANGELOG.md` to contain `## [unreleased]` again.
 
 ## License
 
