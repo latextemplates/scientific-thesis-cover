@@ -143,12 +143,6 @@ In case files are not listed here, but available at https://github.com/koppor/re
 
 ### Contributors (incomplete list)
 
-Copyright 1990-1996 Bernd Raichle
-Copyright 2001 Timo Heiber, Matthias Papesch
-Copyright 2005 Steffen Keul
-Copyright 2006 Nils Radtke, Oliver Kopp
-Copyright 2007-2017 Oliver Kopp
-Copyright 2012-2017 Kai Mindermann
-Copyright 2012 Niklas Schnelle
+Bernd Raichle, Timo Heiber, Steffen Keul, Oliver Kopp, Kai Mindermann, Matthias Papesch, Nils Radtke, Niklas Schnelle
 
   [computer science institutes of the University of Stuttgart]: http://www.informatik.uni-stuttgart.de/index.en.html
