@@ -127,7 +127,8 @@ Multiline/Commands in option values are currently only supported if you load `kv
 5. Add CHANGELOG part to GitHub release manually, because [github-release-from-changelog](https://github.com/MoOx/github-release-from-changelog) currently works with `package.json`  only.
 6. Publish to CTAN
   - Windows: Patch `C:\MiKTeX\scripts\ctanify\ctanify`: Remove `-y` from `zip` command line arguments `zip -q -r -9 -y -m`.
-  - Run `perl "C:\MiKTeX\scripts\ctanify\ctanify" README.md scientific-thesis-cover.sty`
+  - Run `pdflatex demo`
+  - Run `perl "C:\MiKTeX\scripts\ctanify\ctanify" README.md scientific-thesis-cover.sty demo.pdf`
   - Go to <https://www.ctan.org/upload> and use `scientific-thesis-cover.tar.gz` as archive.
 
 ## License

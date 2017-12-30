@@ -5,6 +5,7 @@ jobs:
        - image: koppor/texlive
      steps:
        - checkout
+       - run: pdflatex demo.tex
        - run: cd tests && pdflatex TEST_english_oneside.tex
        - run: cd tests && pdflatex TEST_english_oneside_no_number.tex
        - run: cd tests && pdflatex TEST_english_twoside.tex

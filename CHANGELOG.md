@@ -9,6 +9,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 ### Added
 
 - Added shorthand for sec institute.
+- Added `demo.tex` which produces `demo.pdf` providing a short illustration.
 
 ### Changed
 
