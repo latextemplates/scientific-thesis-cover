@@ -6,7 +6,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 ## [unreleased]
 
-## [4.0.0]
+## [4.0.0] - 2016-12-30
 
 ### Added
 
@@ -22,7 +22,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 ### Removed
 
 - Removed `thesis.tex` as we recommend <https://github.com/latextemplates/scientific-thesis-template>.
-
+- Removed "CR classification" as the [ACM Computing Classification System](https://en.wikipedia.org/wiki/ACM_Computing_Classification_System) from [1998](https://www.acm.org/about-acm/class/how-to-use) is superseeded by a very different system from [2012](https://www.acm.org/publications/class-2012). However, the 2012 classification is not required by the University of Stuttgart anymore.
 
 ## [3.1] - 2016-05-29
 
