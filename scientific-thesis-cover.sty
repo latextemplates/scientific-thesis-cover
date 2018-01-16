@@ -168,14 +168,14 @@
 }
 
 % set those labels according to the set language
-\newcommand{\USCCover@setLanguage{
-        \def\0{english}
-        \ifx\MCS@language\0
-            \labelsenglish
-        \else
-            \labelsgerman
-        \fi
-    }}
+\newcommand{\USCCover@setLanguage}{
+    \def\0{english}
+    \ifx\MCS@language\0
+        \labelsenglish
+    \else
+        \labelsgerman
+    \fi
+}
 
 % set \@labelType if matched
 \newcommand{\USCCover@setType}{

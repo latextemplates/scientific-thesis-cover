@@ -6,6 +6,9 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 ## [unreleased]
 
+### Fixed
+- Fix `\USCCover@setLanguage` to have correct `{}` in the implementation.
+
 ## [4.0.0] - 2016-12-30
 
 ### Added
