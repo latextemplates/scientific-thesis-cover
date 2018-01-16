@@ -1,7 +1,7 @@
 # Cover page for scientific works
 
 [![Build Status](https://circleci.com/gh/latextemplates/scientific-thesis-cover/tree/master.svg?style=shield)](https://circleci.com/gh/latextemplates/scientific-thesis-cover/)
-[![CTTAN](https://img.shields.io/badge/CTAN-scientific--thesis--cover-blue.svg?style=flat-square)](https://ctan.org/pkg/scientific-thesis-cover)
+[![CTAN](https://img.shields.io/badge/CTAN-scientific--thesis--cover-blue.svg?style=flat-square)](https://ctan.org/pkg/scientific-thesis-cover)
 
 Institutions require a cover page and an affirmation at the end of the thesis.
 This package provides both.
@@ -132,9 +132,11 @@ Multiline/Commands in option values are currently only supported if you load `kv
 4. Push to GitHub
 5. Add CHANGELOG part to GitHub release manually, because [github-release-from-changelog](https://github.com/MoOx/github-release-from-changelog) currently works with `package.json`  only.
 6. Publish to CTAN
-  - Windows: Patch `C:\MiKTeX\scripts\ctanify\ctanify`: Remove `-y` from `zip` command line arguments `zip -q -r -9 -y -m`.
-  - Run `pdflatex demo`
-  - Run `perl "C:\MiKTeX\scripts\ctanify\ctanify" README.md scientific-thesis-cover.sty demo.pdf`
+  - Pre-conditions:
+    - Windows: Patch `C:\MiKTeX\scripts\ctanify\ctanify`: Remove `-y` from `zip` command line arguments `zip -q -r -9 -y -m`.
+    - Windows: Environment variable `TMP` must not contain backslashes. E.g., `C:/TEMP/WIN` is good, `C:\Users\user\AppData\Local\Temp` is bad.
+    - Have `pandoc` and `sed` in the path.
+  - Run `release.bat`.
   - Go to <https://www.ctan.org/upload> and use `scientific-thesis-cover.tar.gz` as archive.
 7. Adapt `CHANGELOG.md` to contain `## [unreleased]` again.
 
