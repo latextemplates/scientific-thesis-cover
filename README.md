@@ -126,6 +126,7 @@ Multiline/Commands in option values are currently only supported if you load `kv
 
 ## How to release
 
+1. Check if indent is correct: `latexindent -y="indentPreamble:1,defaultIndent:'    '" -m -w scientific-thesis-cover.sty`
 1. Adapt `CHANGELOG.md`
 2. Adapt version and date in `scientific-thesis-cover.sty`
 3. Tag the release commit using `git tag`
