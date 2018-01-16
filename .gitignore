@@ -1,5 +1,8 @@
+.idea/
 *.aux
+*.bak*
 *.log
 *.pdf
 *.synctex*
+scientific-thesis-cover.md
 scientific-thesis-cover.tar.gz
