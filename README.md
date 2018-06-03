@@ -1,7 +1,4 @@
-# Cover page for scientific works
-
-[![Build Status](https://circleci.com/gh/latextemplates/scientific-thesis-cover/tree/master.svg?style=shield)](https://circleci.com/gh/latextemplates/scientific-thesis-cover/)
-[![CTAN](https://img.shields.io/badge/CTAN-scientific--thesis--cover-blue.svg?style=flat-square)](https://ctan.org/pkg/scientific-thesis-cover)
+# Cover page for scientific works [![Build Status](https://circleci.com/gh/latextemplates/scientific-thesis-cover/tree/master.svg?style=shield)](https://circleci.com/gh/latextemplates/scientific-thesis-cover/) [![CTAN](https://img.shields.io/badge/CTAN-scientific--thesis--cover-blue.svg?style=flat-square)](https://ctan.org/pkg/scientific-thesis-cover)
 
 Institutions require a cover page and an affirmation at the end of the thesis.
 This package provides both.
