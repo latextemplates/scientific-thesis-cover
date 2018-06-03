@@ -6,6 +6,9 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 ## [unreleased]
 
+## Fixed
+- Also include `demo.tex` and `CHANGELOG.md` in CTAN upload.
+
 ## [4.0.1] - 2018-06-03
 
 ### Fixed
