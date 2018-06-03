@@ -14,13 +14,16 @@ Please report issues concerning this package at the GitHub repository at <https:
 
 ## Installation
 
-- Download `scientific-thesis-cover.sty`
+Usually, one does not need a seperate installation step, because both MiKTeX and texlive come with a recent version of this template.
+Do not forget to [keep your tex distribution updated](https://tex.stackexchange.com/q/55437/9075).
+
+Alternatively, you can download `scientific-thesis-cover.sty` and put it in the folder where you are going to use it.
 
 ## Usage Example
 
-An example can be found in [tests/TEST_english_oneside.tex](tests/TEST_english_oneside.tex).
+An example can be found in [demo.tex](demo.tex).
 
-## Usage 
+## Usage
 
 Just include the package with all options specified:
 
