@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [unreleased]
+## [4.0.1] - 2018-06-03
 
 ### Fixed
 - Fix `\USCCover@setLanguage` to have correct `{}` in the implementation.
@@ -52,6 +52,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 Versioned outside of GitHub.
 
-[unreleased]: https://github.com/latextemplates/scientific-thesis-cover/compare/3.1...HEAD
+[unreleased]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.1...HEAD
+[4.0.1]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/3.1...4.0.0
 [3.1]: https://github.com/latextemplates/scientific-thesis-cover/compare/3.0...3.1
