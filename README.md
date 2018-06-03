@@ -138,7 +138,8 @@ Multiline/Commands in option values are currently only supported if you load `kv
     - Windows: Environment variable `TMP` must not contain backslashes. E.g., `C:/TEMP/WIN` is good, `C:\Users\user\AppData\Local\Temp` is bad.
     - Have `pandoc` and `sed` in the path.
   - Run `release.bat`.
-  - Go to <https://www.ctan.org/upload> and use `scientific-thesis-cover.tar.gz` as archive.
+  - Go to <https://ctan.org/pkg/scientific-thesis-cover>, choose "Upload"
+  - Use `scientific-thesis-cover.tar.gz` as archive.
 7. Adapt `CHANGELOG.md` to contain `## [unreleased]` again.
 
 ## License
