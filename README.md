@@ -4,7 +4,7 @@ Institutions require a cover page and an affirmation at the end of the thesis.
 This package provides both.
 It stems from the [computer science institutes of the University of Stuttgart], but is open to any university.
 
-In case you are looking for a **full thesis template** including a cover page and affirmation, please go to <http://latextemplates.github.io/scientific-thesis-template/>.
+In case you are looking for a **full thesis template** including a cover page and affirmation, please go to <https://latextemplates.github.io/scientific-thesis-template/>.
 Please report issues concerning this package at the GitHub repository at <https://github.com/latextemplates/scientific-thesis-cover>.
 
 ## Features
