@@ -1,13 +1,10 @@
-# Cover page for scientific works
-
-[![Build Status](https://circleci.com/gh/latextemplates/scientific-thesis-cover/tree/master.svg?style=shield)](https://circleci.com/gh/latextemplates/scientific-thesis-cover/)
-[![CTAN](https://img.shields.io/badge/CTAN-scientific--thesis--cover-blue.svg?style=flat-square)](https://ctan.org/pkg/scientific-thesis-cover)
+# Cover page for scientific works [![Build Status](https://circleci.com/gh/latextemplates/scientific-thesis-cover/tree/master.svg?style=shield)](https://circleci.com/gh/latextemplates/scientific-thesis-cover/) [![CTAN](https://img.shields.io/badge/CTAN-scientific--thesis--cover-blue.svg?style=flat-square)](https://ctan.org/pkg/scientific-thesis-cover)
 
 Institutions require a cover page and an affirmation at the end of the thesis.
 This package provides both.
 It stems from the [computer science institutes of the University of Stuttgart], but is open to any university.
 
-In case you are looking for a **full thesis template** including a cover page and affirmation, please go to <http://latextemplates.github.io/scientific-thesis-template/>.
+In case you are looking for a **full thesis template** including a cover page and affirmation, please go to <https://latextemplates.github.io/scientific-thesis-template/>.
 Please report issues concerning this package at the GitHub repository at <https://github.com/latextemplates/scientific-thesis-cover>.
 
 ## Features
@@ -17,13 +14,16 @@ Please report issues concerning this package at the GitHub repository at <https:
 
 ## Installation
 
-- Download `scientific-thesis-cover.sty`
+Usually, one does not need a seperate installation step, because both MiKTeX and texlive come with a recent version of this template.
+Do not forget to [keep your tex distribution updated](https://tex.stackexchange.com/q/55437/9075).
+
+Alternatively, you can download `scientific-thesis-cover.sty` and put it in the folder where you are going to use it.
 
 ## Usage Example
 
-An example can be found in [tests/TEST_english_oneside.tex](tests/TEST_english_oneside.tex).
+An example can be found in [demo.tex](demo.tex).
 
-## Usage 
+## Usage
 
 Just include the package with all options specified:
 
