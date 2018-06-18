@@ -80,7 +80,6 @@ This package supports the following options:
     - `institute=iti` will state Institute of Computer Architecture and Computer Engineering
     - `institute=iris` will state Institute of Computer-aided Product Development Systems
     - `institute=vis` will state Institute of Visualization and Interactive Systems
-    - `institute=visus` will state Visualisation Research Center Stuttgart
     - `institute=sec` will state Institute of Information Security
     - `institute=fac` will state Faculty of Computer Science
     - Arbitrary strings are possible: `institute={Custom fictional institute}` will state Custom fictional institute
