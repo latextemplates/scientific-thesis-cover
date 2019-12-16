@@ -9,7 +9,7 @@ Please report issues concerning this package at the GitHub repository at <https:
 
 ## Features
 
-- utf8 
+- utf8
 - options for all required text on the coverpage
 
 ## Installation
@@ -71,11 +71,12 @@ This package supports the following options:
     - `type=study` will label your work as Student Research Project
     - `type=projectinf` will label your work as Projekt-INF
     - Arbitrary strings are also possible: `type={research project}` will label your work as "research project"
-    
+
 - institute: States for which institute you are doing this work. May be set to one of the following values or arbitrary text in curly braces:
     - `institute=iaas` will state Institute of Architecture of Application Systems
     - `institute=ipvs` will state Institute of Parallel and Distributed Systems
     - `institute=fmi` will state Institute of Formal Methods in Computer Science
+    - `institute=ims` will state Institute for Natural Language Processing
     - `institute=iste` will state Institute of Software Technology
     - `institute=iti` will state Institute of Computer Architecture and Computer Engineering
     - `institute=iris` will state Institute of Computer-aided Product Development Systems
@@ -93,7 +94,7 @@ This package supports the following options:
     - `course=simtech` will state that your course of study is Simulation Technology
     - Arbitrary strings are possible: `course={New Study course}` will state that your course of study is New Study course
 
-- examiner: Your examiner. 
+- examiner: Your examiner.
     - `examiner={Prof.\ Dr.\ Hans Mustermann}`
 
 - supervisor: Your supervisor.
