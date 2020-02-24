@@ -8,6 +8,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 ### Added
 - Add `Institute for Natural Language Processing` as an institute option
+- Add document confirmations for multiple authors
 
 ## [4.0.2] - 2018-06-03
 

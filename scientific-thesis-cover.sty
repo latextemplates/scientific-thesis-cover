@@ -372,8 +372,9 @@
 
 \newcommand{\Versicherung}{
     \cleardoublepage
-    \newcommand{\USCCover@isTwoColumn}{false}
-    \if@twocolumn \renewcommand{\USCCover@isTwoColumn}{true} \onecolumn \fi
+    \providecommand{\USCCover@isTwoColumn}{}
+    \if@twocolumn \renewcommand{\USCCover@isTwoColumn}{true} \onecolumn
+        \else \renewcommand{\USCCover@isTwoColumn}{false} \fi
     \null
     \vskip 5cm\relax
     \begin{center}
@@ -390,7 +391,7 @@
         \end{minipage}
     \end{center}
     \clearpage
-    \newcommand{\USCCover@true}{true}
+    \providecommand{\USCCover@true}{true}
     \ifthenelse{\equal{\USCCover@isTwoColumn}{\USCCover@true}}{\twocolumn}{}
 }
 \newcommand{\Affirmation}{\Versicherung}
