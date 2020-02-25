@@ -70,6 +70,7 @@ This package supports the following options:
     - `type=diplom` will label your work as Diploma Thesis
     - `type=study` will label your work as Student Research Project
     - `type=projectinf` will label your work as Projekt-INF
+    - `type=prozessanalyse` will label your work as Prozessanalyse
     - Arbitrary strings are also possible: `type={research project}` will label your work as "research project"
 
 - institute: States for which institute you are doing this work. May be set to one of the following values or arbitrary text in curly braces:
