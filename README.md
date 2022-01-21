@@ -160,7 +160,7 @@ In case files are not listed here, but available at <https://github.com/latextem
 
 ### Contributors (incomplete list)
 
-Bernd Raichle, Timo Heiber, Steffen Keul, Oliver Kopp, Kai Mindermann, Matthias Papesch, Nils Radtke, Niklas Schnelle
+Bernd Raichle, Timo Heiber, Steffen Keul, Oliver Kopp, Kai Mindermann, Matthias Papesch, Nils Radtke, Niklas Schnelle, Tim Halach
 
   [computer science institutes of the University of Stuttgart]: http://www.informatik.uni-stuttgart.de/index.en.html
   [INFOTECH]: https://www.uni-stuttgart.de/infotech/
