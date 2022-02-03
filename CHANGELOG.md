@@ -11,6 +11,9 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 - Add document confirmations for multiple authors
 - Added VISUS as an institute.
 
+## Fixed
+- Fix `ß` being displayed as `SS` in `Universitätsstraße`.
+
 ## [4.0.2] - 2018-06-03
 
 ## Fixed
