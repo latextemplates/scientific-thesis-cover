@@ -82,6 +82,7 @@ This package supports the following options:
     - `institute=iti` will state Institute of Computer Architecture and Computer Engineering
     - `institute=iris` will state Institute of Computer-aided Product Development Systems
     - `institute=vis` will state Institute of Visualization and Interactive Systems
+    - `institute=visus` will state Visualization Research Center (VISUS)
     - `institute=sec` will state Institute of Information Security
     - `institute=fac` will state Faculty of Computer Science
     - Arbitrary strings are possible: `institute={Custom fictional institute}` will state Custom fictional institute
@@ -160,7 +161,7 @@ In case files are not listed here, but available at <https://github.com/latextem
 
 ### Contributors (incomplete list)
 
-Bernd Raichle, Timo Heiber, Steffen Keul, Oliver Kopp, Kai Mindermann, Matthias Papesch, Nils Radtke, Niklas Schnelle
+Bernd Raichle, Timo Heiber, Steffen Keul, Oliver Kopp, Kai Mindermann, Matthias Papesch, Nils Radtke, Niklas Schnelle, Tim Halach
 
   [computer science institutes of the University of Stuttgart]: http://www.informatik.uni-stuttgart.de/index.en.html
   [INFOTECH]: https://www.uni-stuttgart.de/infotech/
