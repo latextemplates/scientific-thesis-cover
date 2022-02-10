@@ -10,6 +10,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 - Add `Institute for Natural Language Processing` as an institute option
 - Add document confirmations for multiple authors
 - Added VISUS as an institute.
+- Added the ability to add a logo at the top of the coverpage.
 
 ## Fixed
 - Fix `ß` being displayed as `SS` in `Universitätsstraße`.

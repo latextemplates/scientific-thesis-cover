@@ -37,7 +37,8 @@ Just include the package with all options specified:
         supervisor={Otto Normalverbraucher, M.Sc.},
         startdate={2012-06-01},
         enddate={2012-12-01},
-        language=english
+        language=english,
+        logo={unilogo}
     ]{scientific-thesis-cover}
 
 Afterwards you can create the cover using `\Coverpage` and get the affirmation text by using `\Affirmation`
@@ -116,6 +117,8 @@ This package supports the following options:
 
 - number: Running number of work. May contain arbitrary text. Should contain the number you got for your work.
     - `number=1234` will label your work to have number 1234
+- logo: Adds a logo, e.g. of your university, at the top of the coverpage.
+    - The image's path can not contain any underscores!
 - `setPageNumberToOne=true` will set the page after the cover to `1` (default false)
 - `setCoverPageNumberToMinusOne=true` will set `-1` as the page number for the cover page (default false)
 
