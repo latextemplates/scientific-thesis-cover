@@ -78,7 +78,7 @@ This package supports the following options:
     - `institute=ipvs` will state Institute of Parallel and Distributed Systems
     - `institute=fmi` will state Institute of Formal Methods in Computer Science
     - `institute=ims` will state Institute for Natural Language Processing
-    - `institute=iste` will state Institute of Software Technology
+    - `institute=iste` will state Institute of Software Engineering
     - `institute=iti` will state Institute of Computer Architecture and Computer Engineering
     - `institute=iris` will state Institute of Computer-aided Product Development Systems
     - `institute=vis` will state Institute of Visualization and Interactive Systems
