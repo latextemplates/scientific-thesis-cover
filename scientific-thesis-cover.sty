@@ -52,6 +52,7 @@
 \DeclareStringOption[supervisor not set]{supervisor}
 \DeclareStringOption[startdate not set]{startdate}
 \DeclareStringOption[enddate not set]{enddate}
+\DeclareStringOption[]{logo}
 \DeclareStringOption[standard]{covertype} % type of the coverpage: standard, ustuttdiss
 
 \DeclareStringOption[german]{language}
@@ -265,6 +266,11 @@
         \rightmargin 20mm \let\makelabel\USCCover@TBlabel}%
 }{\endlist}
 
+% Only include package if a logo is provided, otherwise it is not needed.
+\ifx\MCS@logo\empty
+\else
+    \usepackage{graphicx}
+\fi
 % ------------------------------
 % usable commands
 % ------------------------------
@@ -311,7 +317,21 @@
 
                 \vskip 20mm\relax %%%
 
-                \vbox to 70mm{
+                % Height of the institute vbox
+                \newcommand{\instituteHeight}{70}
+
+                \ifx\MCS@logo\empty
+                \else
+                    \vbox to 15mm{
+                        \begin{center}
+                            \includegraphics[height=14mm]{\MCS@logo}
+                        \end{center}
+                       \vfill}
+                    % Height of institute vbox reduced to accomodate logo
+                    \renewcommand{\instituteHeight}{55}
+                \fi
+
+                \vbox to \instituteHeight mm{
                         \begin{center}%
                             \@labelInstitute
                         \end{center}
