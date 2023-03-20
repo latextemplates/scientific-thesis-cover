@@ -75,7 +75,7 @@ This package supports the following options:
 
 - institute: States for which institute you are doing this work. May be set to one of the following values or arbitrary text in curly braces:
     - `institute=iaas` will state Institute of Architecture of Application Systems
-    - `institute=ipvs` will state Institute of Parallel and Distributed Systems
+    - `institute=ipvs` will state Institute for Parallel and Distributed Systems
     - `institute=fmi` will state Institute of Formal Methods in Computer Science
     - `institute=ims` will state Institute for Natural Language Processing
     - `institute=iste` will state Institute of Software Engineering
