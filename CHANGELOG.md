@@ -14,6 +14,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 ## Fixed
 - Fix `ß` being displayed as `SS` in `Universitätsstraße`.
+- Fix English name of IPVS: "Institute **for** Parallel and Distributed Systems" instead of "Institute **of** Parallel and Distributed Systems"
 
 ## [4.0.2] - 2018-06-03
 
