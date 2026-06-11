@@ -17,6 +17,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 ### Changed
 
 - Switched continuous integration from CircleCI to GitHub Actions, installing TeX Live via [`zauguin/install-texlive`](https://github.com/zauguin/install-texlive) with the dependency list in `tl_packages` (generated with [DEPP](https://gitlab.com/islandoftex/texmf/depp)).
+- Added a GitHub Actions workflow that builds the CTAN submission archive (`release.sh`, the Linux port of `release.bat`) on every push, verifying that pandoc and `ctanify` produce `scientific-thesis-cover.tar.gz`.
 
 ## Fixed
 

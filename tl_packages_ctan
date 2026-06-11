@@ -1,0 +1,69 @@
+# TeX Live packages required to build the CTAN submission archive via
+# release.sh (see .github/workflows/ctan.yml). One package per line;
+# "#" starts a comment.
+#
+# This is a superset of tl_packages: it also contains the packages that
+# pandoc's default LaTeX template pulls in when converting README.md to
+# scientific-thesis-cover.pdf, plus ctanify itself. The pandoc-template
+# dependencies were detected with DEPP (https://gitlab.com/islandoftex/texmf/depp)
+# on a standalone LaTeX export of the README.
+#
+# ctanify additionally needs the Perl module File::Copy::Recursive, which is
+# installed in the workflow via apt (libfile-copy-recursive-perl).
+amsfonts
+amsmath
+babel
+babel-german
+bigintcalc
+bitset
+blindtext
+bookmark
+cm
+csquotes
+ctanify
+ec
+epstopdf-pkg
+etoolbox
+gettitlestring
+graphics
+graphics-cfg
+graphics-def
+hycolor
+hyperref
+hyphen-german
+iftex
+infwarerr
+intcalc
+kvdefinekeys
+kvoptions
+kvsetkeys
+l3backend
+l3kernel
+l3packages
+latex
+latex-bin
+latexconfig
+latex-fonts
+latexmk
+lipsum
+lm
+ltxcmds
+luatex
+mathpazo
+microtype
+mwe
+palatino
+parskip
+pdfescape
+pdftexcmds
+psnfss
+refcount
+rerunfilecheck
+stringenc
+symbols
+tools
+uniquecounter
+upquote
+url
+xcolor
+xurl
