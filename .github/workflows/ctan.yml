@@ -1,0 +1,52 @@
+name: CTAN
+
+# Check that the CTAN submission archive can be built (release.sh):
+# pandoc converts README.md to the documentation PDF and ctanify bundles
+# everything into scientific-thesis-cover.tar.gz. This does not upload to
+# CTAN; that step stays manual.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  ctanify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install pandoc and ctanify's Perl dependency
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: pandoc libfile-copy-recursive-perl
+          version: 1.0
+
+      - name: Install TeX Live
+        uses: zauguin/install-texlive@v4
+        with:
+          package_file: tl_packages_ctan
+
+      # install-texlive does not refresh the font map or hyphenation
+      # patterns after installing packages, so the Type1 Computer Modern
+      # fonts are not found and pdftex falls back to (missing) bitmap fonts.
+      # See https://github.com/zauguin/install-texlive/issues/54
+      - name: Refresh font maps and hyphenation
+        run: |
+          updmap-sys
+          tlmgr generate language --rebuild-sys
+
+      - name: Build the CTAN archive
+        run: ./release.sh
+
+      - name: Upload CTAN archive
+        uses: actions/upload-artifact@v7
+        with:
+          name: ctan-archive
+          path: scientific-thesis-cover.tar.gz

@@ -1,0 +1,48 @@
+# TeX Live packages required to build the demo and the test documents.
+#
+# This list is consumed by the zauguin/install-texlive GitHub Action
+# (see .github/workflows/build.yml). One package per line; "#" starts a comment.
+#
+# It was generated with DEPP (https://gitlab.com/islandoftex/texmf/depp) by
+# compiling demo.tex and tests/*.tex, then adding the engine/build binaries
+# (latex-bin, luatex, latexmk) that DEPP does not detect, plus two pieces
+# DEPP cannot see (its font detection is luatex-only, and CI compiles with
+# pdflatex): amsfonts for the Type1 Computer Modern outlines (e.g. cmssbx10)
+# and dvips for the base font encodings (8r.enc) the Palatino fonts need.
+# (The Palatino outlines used by mathpazo already come from `palatino`.)
+#
+# Verified by installing exactly this list on a scheme-infraonly TeX Live
+# (no Metafont, as install-texlive provides) and compiling all documents.
+amsfonts
+babel
+babel-german
+blindtext
+cm
+csquotes
+dvips
+epstopdf-pkg
+etoolbox
+graphics
+graphics-cfg
+graphics-def
+hyphen-german
+iftex
+kvoptions
+kvsetkeys
+l3backend
+l3kernel
+l3packages
+latex
+latex-bin
+latex-fonts
+latexconfig
+latexmk
+lipsum
+lm
+ltxcmds
+luatex
+mathpazo
+mwe
+palatino
+psnfss
+tools

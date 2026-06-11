@@ -1,0 +1,70 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install TeX Live
+        uses: zauguin/install-texlive@v4
+        with:
+          package_file: tl_packages
+
+      # install-texlive does not refresh the font map or hyphenation
+      # patterns after installing packages, so the Type1 Computer Modern
+      # fonts are not found and pdftex falls back to (missing) bitmap fonts.
+      # See https://github.com/zauguin/install-texlive/issues/54
+      - name: Refresh font maps and hyphenation
+        run: |
+          updmap-sys
+          tlmgr generate language --rebuild-sys
+
+      - name: Compile demo
+        run: pdflatex -interaction=nonstopmode -halt-on-error demo.tex
+
+      - name: Compile tests
+        working-directory: tests
+        run: |
+          for f in \
+            TEST_english_oneside \
+            TEST_english_oneside_no_number \
+            TEST_english_twoside \
+            TEST_german_oneside \
+            TEST_german_twoside
+          do
+            pdflatex -interaction=nonstopmode -halt-on-error "$f.tex"
+          done
+
+      - name: Assemble site
+        run: |
+          mkdir build
+          cp README.md tests/*.pdf .github/_config.yml demo.pdf build/
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v7
+        with:
+          name: pdfs
+          path: build
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          enable_jekyll: true
