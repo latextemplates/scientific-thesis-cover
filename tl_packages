@@ -5,7 +5,11 @@
 #
 # It was generated with DEPP (https://gitlab.com/islandoftex/texmf/depp) by
 # compiling demo.tex and tests/*.tex, then adding the engine/build binaries
-# (latex-bin, luatex, latexmk) that DEPP does not detect.
+# (latex-bin, luatex, latexmk) that DEPP does not detect, plus the Type1
+# outline font packages that pdflatex embeds but DEPP cannot see (its font
+# detection is luatex-only): amsfonts (Computer Modern) and urw-base35
+# (Palatino, used by mathpazo).
+amsfonts
 babel
 babel-german
 blindtext
@@ -37,3 +41,4 @@ mwe
 palatino
 psnfss
 tools
+urw-base35
