@@ -25,6 +25,15 @@ jobs:
         with:
           package_file: tl_packages
 
+      # install-texlive does not refresh the font map or hyphenation
+      # patterns after installing packages, so the Type1 Computer Modern
+      # fonts are not found and pdftex falls back to (missing) bitmap fonts.
+      # See https://github.com/zauguin/install-texlive/issues/54
+      - name: Refresh font maps and hyphenation
+        run: |
+          updmap-sys
+          tlmgr generate language --rebuild-sys
+
       - name: Compile demo
         run: pdflatex -interaction=nonstopmode -halt-on-error demo.tex
 
