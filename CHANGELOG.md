@@ -2,8 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/).
-Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver.org/).
+The format is based on [Keep a Changelog](https://keepachangelog.com/).
+Since version 4.0.0, this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
@@ -16,10 +16,10 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 ### Changed
 
-- Switched continuous integration from CircleCI to GitHub Actions, installing TeX Live via [`zauguin/install-texlive`](https://github.com/zauguin/install-texlive) with the dependency list in `tl_packages` (generated with [DEPP](https://gitlab.com/islandoftex/texmf/depp)).
+- Switched continuous integration from CircleCI to GitHub Actions, installing TeX Live via [`zauguin/install-texlive`](https://github.com/zauguin/install-texlive) with the dependency list in `tl_packages` (generated with [@islandoftex/texmf/depp](https://gitlab.com/islandoftex/texmf/depp)).
 - Added a GitHub Actions workflow that builds the CTAN submission archive (`release.sh`, the Linux port of `release.bat`) on every push, verifying that pandoc and `ctanify` produce `scientific-thesis-cover.tar.gz`.
 
-## Fixed
+### Fixed
 
 - Fix `ß` being displayed as `SS` in `Universitätsstraße`.
 - Fix English name of IPVS: "Institute **for** Parallel and Distributed Systems" instead of "Institute **of** Parallel and Distributed Systems"
@@ -28,7 +28,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 ## [4.0.2] - 2018-06-03
 
-## Fixed
+### Fixed
 
 - Also include `demo.tex` and `CHANGELOG.md` in CTAN upload.
 
@@ -78,13 +78,16 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 - Versioning on GitHub
 - Cover is typeset with serif font
 
-## 3.0 - 2012-11-20
+## [3.0] - 2012-11-20
 
-Versioned outside of GitHub.
+### Added
+
+- First release, versioned outside of GitHub.
 
 [Unreleased]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.2...HEAD
 [4.0.2]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.1...4.0.2
 [4.0.1]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/3.1...4.0.0
 [3.1]: https://github.com/latextemplates/scientific-thesis-cover/compare/3.0...3.1
+[3.0]: https://github.com/latextemplates/scientific-thesis-cover/releases/tag/3.0
 <!-- markdownlint-disable-file MD024 MD033 MD053 -->
