@@ -1,0 +1,39 @@
+# TeX Live packages required to build the demo and the test documents.
+#
+# This list is consumed by the zauguin/install-texlive GitHub Action
+# (see .github/workflows/build.yml). One package per line; "#" starts a comment.
+#
+# It was generated with DEPP (https://gitlab.com/islandoftex/texmf/depp) by
+# compiling demo.tex and tests/*.tex, then adding the engine/build binaries
+# (latex-bin, luatex, latexmk) that DEPP does not detect.
+babel
+babel-german
+blindtext
+cm
+csquotes
+epstopdf-pkg
+etoolbox
+graphics
+graphics-cfg
+graphics-def
+hyphen-german
+iftex
+kvoptions
+kvsetkeys
+l3backend
+l3kernel
+l3packages
+latex
+latex-bin
+latex-fonts
+latexconfig
+latexmk
+lipsum
+lm
+ltxcmds
+luatex
+mathpazo
+mwe
+palatino
+psnfss
+tools

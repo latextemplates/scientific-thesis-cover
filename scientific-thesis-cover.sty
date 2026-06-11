@@ -8,7 +8,10 @@
 % kvoptions for key value options support
 \RequirePackage{kvoptions}
 \RequirePackage{ifthen}
-%\RequirePackage{ifluatex}
+\RequirePackage{iftex}
+\RequirePackage{ifluatex}
+% csquotes provides \enquote, used in the affirmation text
+\RequirePackage{csquotes}
 
 % this package requires utf8 inputenc
 \def\USCCover@utf8warning{\PackageWarningNoLine{\USCCover@Pgkname}

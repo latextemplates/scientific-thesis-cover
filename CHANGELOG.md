@@ -14,10 +14,16 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 - Added VISUS as an institute.
 - Added the ability to add a logo at the top of the coverpage.
 
+### Changed
+
+- Switched continuous integration from CircleCI to GitHub Actions, installing TeX Live via [`zauguin/install-texlive`](https://github.com/zauguin/install-texlive) with the dependency list in `tl_packages` (generated with [DEPP](https://gitlab.com/islandoftex/texmf/depp)).
+
 ## Fixed
 
 - Fix `ß` being displayed as `SS` in `Universitätsstraße`.
 - Fix English name of IPVS: "Institute **for** Parallel and Distributed Systems" instead of "Institute **of** Parallel and Distributed Systems"
+- Load `csquotes` so that `\enquote` in the affirmation text (AI tools declaration) is defined.
+- Load `iftex`/`ifluatex` so that `\ifluatex` is defined again, fixing an `Extra \fi` error on current TeX Live.
 
 ## [4.0.2] - 2018-06-03
 
