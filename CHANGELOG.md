@@ -1,32 +1,38 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [unreleased]
+## [Unreleased]
 
 ### Added
+
 - Add `Institute for Natural Language Processing` as an institute option
 - Add document confirmations for multiple authors
 - Added VISUS as an institute.
 - Added the ability to add a logo at the top of the coverpage.
 
 ## Fixed
+
 - Fix `ß` being displayed as `SS` in `Universitätsstraße`.
 - Fix English name of IPVS: "Institute **for** Parallel and Distributed Systems" instead of "Institute **of** Parallel and Distributed Systems"
 
 ## [4.0.2] - 2018-06-03
 
 ## Fixed
+
 - Also include `demo.tex` and `CHANGELOG.md` in CTAN upload.
 
 ## [4.0.1] - 2018-06-03
 
 ### Fixed
+
 - Fix `\USCCover@setLanguage` to have correct `{}` in the implementation.
 
 ### Changed
+
 - CTAN distributions contains `scientific-thesis-cover.pdf` instead of `README.md` to be consistent with other packages.
 
 ## [4.0.0] - 2016-12-30
@@ -69,8 +75,9 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](http://semver
 
 Versioned outside of GitHub.
 
-[unreleased]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.2...HEAD
+[Unreleased]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.2...HEAD
 [4.0.2]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.1...4.0.2
 [4.0.1]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/3.1...4.0.0
 [3.1]: https://github.com/latextemplates/scientific-thesis-cover/compare/3.0...3.1
+<!-- markdownlint-disable-file MD024 MD033 MD053 -->
