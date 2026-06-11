@@ -7,24 +7,30 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 
 ## [Unreleased]
 
+## [4.1.0] - 2026-06-12
+
 ### Added
 
-- Add `Institute for Natural Language Processing` as an institute option
-- Add document confirmations for multiple authors
-- Added VISUS as an institute.
-- Added the ability to add a logo at the top of the coverpage.
+- Update the declaration to cover the use of AI tools: the affirmation text now references a "Use of AI Tools" appendix and the *Principles for the Use of Artificial Intelligence by Students at the University of Stuttgart*. See [#30](https://github.com/latextemplates/scientific-thesis-cover/pull/30) and [#36](https://github.com/latextemplates/scientific-thesis-cover/pull/36).
+- Add `Institute for Natural Language Processing` (`ims`, German: "Institut für Maschinelle Sprachverarbeitung") as an institute option, including its own address. See [#22](https://github.com/latextemplates/scientific-thesis-cover/pull/22) and [#23](https://github.com/latextemplates/scientific-thesis-cover/pull/23).
+- Add `VISUS` (Visualization Research Center / Visualisierungsinstitut der Universität Stuttgart) as an institute option, including its own address. See [#27](https://github.com/latextemplates/scientific-thesis-cover/pull/27).
+- Add the ability to add a logo at the top of the coverpage. See [#28](https://github.com/latextemplates/scientific-thesis-cover/pull/28).
+- Add document confirmations for multiple authors. See [#24](https://github.com/latextemplates/scientific-thesis-cover/pull/24).
+- Add `prozessanalyse` as a thesis type. See [#21](https://github.com/latextemplates/scientific-thesis-cover/pull/21).
 
 ### Changed
 
-- Switched continuous integration from CircleCI to GitHub Actions, installing TeX Live via [`zauguin/install-texlive`](https://github.com/zauguin/install-texlive) with the dependency list in `tl_packages` (generated with [@islandoftex/texmf/depp](https://gitlab.com/islandoftex/texmf/depp)).
-- Added a GitHub Actions workflow that builds the CTAN submission archive (`release.sh`, the Linux port of `release.bat`) on every push, verifying that pandoc and `ctanify` produce `scientific-thesis-cover.tar.gz`.
+- Rename the `iste` institute from "Institute of Software Technology" / "Institut für Softwaretechnologie" to "Institute of Software Engineering" / "Institut für Software Engineering". See [#32](https://github.com/latextemplates/scientific-thesis-cover/pull/32).
+- Switched continuous integration from CircleCI to GitHub Actions, installing TeX Live via [`zauguin/install-texlive`](https://github.com/zauguin/install-texlive) with the dependency list in `tl_packages` (generated with [@islandoftex/texmf/depp](https://gitlab.com/islandoftex/texmf/depp)). See [#37](https://github.com/latextemplates/scientific-thesis-cover/pull/37).
+- Added a GitHub Actions workflow that builds the CTAN submission archive (`release.sh`, the Linux port of `release.bat`) on every push, verifying that pandoc and `ctanify` produce `scientific-thesis-cover.tar.gz`. See [#37](https://github.com/latextemplates/scientific-thesis-cover/pull/37).
 
 ### Fixed
 
-- Fix `ß` being displayed as `SS` in `Universitätsstraße`.
-- Fix English name of IPVS: "Institute **for** Parallel and Distributed Systems" instead of "Institute **of** Parallel and Distributed Systems"
-- Load `csquotes` so that `\enquote` in the affirmation text (AI tools declaration) is defined.
-- Load `iftex`/`ifluatex` so that `\ifluatex` is defined again, fixing an `Extra \fi` error on current TeX Live.
+- Fix `\Versicherung` / `\Affirmation` in two-column documents by declaring the internal two-column flag with `\providecommand`. See [#24](https://github.com/latextemplates/scientific-thesis-cover/pull/24).
+- Fix `ß` being displayed as `SS` in `Universitätsstraße`. See [#29](https://github.com/latextemplates/scientific-thesis-cover/pull/29).
+- Fix English name of IPVS: "Institute **for** Parallel and Distributed Systems" instead of "Institute **of** Parallel and Distributed Systems". See [#34](https://github.com/latextemplates/scientific-thesis-cover/pull/34) and [#35](https://github.com/latextemplates/scientific-thesis-cover/pull/35).
+- Load `csquotes` so that `\enquote` in the affirmation text (AI tools declaration) is defined. See [#37](https://github.com/latextemplates/scientific-thesis-cover/pull/37).
+- Load `iftex`/`ifluatex` so that `\ifluatex` is defined again, fixing an `Extra \fi` error on current TeX Live. See [#37](https://github.com/latextemplates/scientific-thesis-cover/pull/37).
 
 ## [4.0.2] - 2018-06-03
 
@@ -84,7 +90,8 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 
 - First release, versioned outside of GitHub.
 
-[Unreleased]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.2...HEAD
+[Unreleased]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.1.0...HEAD
+[4.1.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.2...4.1.0
 [4.0.2]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.1...4.0.2
 [4.0.1]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/3.1...4.0.0
