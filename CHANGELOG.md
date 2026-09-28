@@ -7,6 +7,10 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 
 ## [Unreleased]
 
+### Fixed
+
+- German declaration: "Hilfsmitel" is now spelled "Hilfsmittel". See [latextemplates/scientific-thesis-template#191](https://github.com/latextemplates/scientific-thesis-template/issues/191).
+
 ## [4.1.0] - 2026-06-12
 
 ### Added
