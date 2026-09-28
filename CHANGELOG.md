@@ -7,8 +7,14 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 
 ## [Unreleased]
 
+### Changed
+
+- The cover page follows the current layout requirements of the Faculty of Computer Science: university name (or logo) on top, institute and its address as separate blocks, fixed positions for thesis type, title, author, and the examination data. The postal code is written without the "D–" prefix.
+- The package requires LaTeX 2020-10-01 or newer.
+
 ### Fixed
 
+- The cover page is now centered regardless of the margins set by the document class or packages such as `geometry` (e.g., with the masters-doctoral-thesis template). See [#9](https://github.com/latextemplates/scientific-thesis-cover/issues/9).
 - German declaration: "Hilfsmitel" is now spelled "Hilfsmittel". See [latextemplates/scientific-thesis-template#191](https://github.com/latextemplates/scientific-thesis-template/issues/191).
 
 ## [4.1.0] - 2026-06-12
