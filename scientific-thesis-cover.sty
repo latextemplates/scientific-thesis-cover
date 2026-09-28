@@ -50,7 +50,8 @@
 \DeclareStringOption[bachelor]{type}
 \DeclareStringOption[fac]{institute}
 \DeclareStringOption[]{number} % running number
-\DeclareStringOption[cs]{course}
+\DeclareStringOption[cs]{studyprogram}
+\define@key{MCS}{course}{\def\MCS@studyprogram{#1}} % old name of studyprogram, kept for backwards compatibility
 \DeclareStringOption[examiner not set]{examiner}
 \DeclareStringOption[advisor not set]{advisor}
 \define@key{MCS}{supervisor}{\def\MCS@advisor{#1}} % old name of advisor, kept for backwards compatibility
@@ -237,13 +238,13 @@
 }
 
 % ------------------------------
-% Evaluate course option and set course
+% Evaluate studyprogram option and set study program
 % ------------------------------
 \newcommand{\USCCover@setCourse}{
-    % use specified text if course does not match
-    \gdef\@labelCourseValue{\MCS@course}
+    % use specified text if study program does not match
+    \gdef\@labelCourseValue{\MCS@studyprogram}
 
-    \def\1{\MCS@course}
+    \def\1{\MCS@studyprogram}
     % dont remove last two braces / empty else clause
     \def\0{cs}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelCourseValue{\@labelCourseCS}}{}
     \def\0{se}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelCourseValue{\@labelCourseSE}}{}

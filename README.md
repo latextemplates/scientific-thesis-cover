@@ -32,7 +32,7 @@ Just include the package with all options specified:
         author={Max Musterjunge},
         type=bachelor,
         institute=iaas,
-        course=cs,
+        studyprogram=cs,
         examiner={Prof.\ Dr.\ Hans Mustermann},
         advisor={Otto Normalverbraucher, M.Sc.},
         startdate={2012-06-01},
@@ -88,14 +88,14 @@ This package supports the following options:
     - `institute=fac` will state Faculty of Computer Science
     - Arbitrary strings are possible: `institute={Custom fictional institute}` will state Custom fictional institute
 
-- course: Type of study. May be set to one of the following values or arbitrary text in curly braces:
-    - `course=cs` will state that your study program is Computer Science
-    - `course=se` will state that your study program is Software Engineering
-    - `course=mcl` will state that your study program is Master Computational Linguistics
-    - `course=msv` will state that your study program is Maschinelle Sprachverarbeitung
-    - `course=bis` will state that your study program is Business Information Systems
-    - `course=simtech` will state that your study program is Simulation Technology
-    - Arbitrary strings are possible: `course={New Study course}` will state that your study program is New Study course
+- studyprogram: Your study program. The old name `course` still works. May be set to one of the following values or arbitrary text in curly braces:
+    - `studyprogram=cs` will state that your study program is Computer Science
+    - `studyprogram=se` will state that your study program is Software Engineering
+    - `studyprogram=mcl` will state that your study program is Master Computational Linguistics
+    - `studyprogram=msv` will state that your study program is Maschinelle Sprachverarbeitung
+    - `studyprogram=bis` will state that your study program is Business Information Systems
+    - `studyprogram=simtech` will state that your study program is Simulation Technology
+    - Arbitrary strings are possible: `studyprogram={New Study program}` will state that your study program is New Study program
 
 - examiner: Your examiner.
     - `examiner={Prof.\ Dr.\ Hans Mustermann}`
