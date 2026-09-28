@@ -34,7 +34,7 @@ Just include the package with all options specified:
         institute=iaas,
         course=cs,
         examiner={Prof.\ Dr.\ Hans Mustermann},
-        supervisor={Otto Normalverbraucher, M.Sc.},
+        advisor={Otto Normalverbraucher, M.Sc.},
         startdate={2012-06-01},
         enddate={2012-12-01},
         language=english,
@@ -89,19 +89,19 @@ This package supports the following options:
     - Arbitrary strings are possible: `institute={Custom fictional institute}` will state Custom fictional institute
 
 - course: Type of study. May be set to one of the following values or arbitrary text in curly braces:
-    - `course=cs` will state that your course of study is Computer Science
-    - `course=se` will state that your course of study is Software Engineering
-    - `course=mcl` will state that your course of study is Master Computational Linguistics
-    - `course=msv` will state that your course of study is Maschinelle Sprachverarbeitung
-    - `course=bis` will state that your course of study is Business Information Systems
-    - `course=simtech` will state that your course of study is Simulation Technology
-    - Arbitrary strings are possible: `course={New Study course}` will state that your course of study is New Study course
+    - `course=cs` will state that your study program is Computer Science
+    - `course=se` will state that your study program is Software Engineering
+    - `course=mcl` will state that your study program is Master Computational Linguistics
+    - `course=msv` will state that your study program is Maschinelle Sprachverarbeitung
+    - `course=bis` will state that your study program is Business Information Systems
+    - `course=simtech` will state that your study program is Simulation Technology
+    - Arbitrary strings are possible: `course={New Study course}` will state that your study program is New Study course
 
 - examiner: Your examiner.
     - `examiner={Prof.\ Dr.\ Hans Mustermann}`
 
-- supervisor: Your supervisor.
-    - `supervisor={Otto Normalverbraucher, M.Sc.}`
+- advisor: Your advisor. The old name `supervisor` still works.
+    - `advisor={Otto Normalverbraucher, M.Sc.}`
 
 - startdate: Startdate of your work.
   Preferably ISO-8601. See <https://xkcd.com/1179/> and <https://www.explainxkcd.com/wiki/index.php/1179:_ISO_8601>.

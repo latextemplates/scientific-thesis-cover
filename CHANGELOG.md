@@ -11,6 +11,8 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 
 - The cover page follows the current layout requirements of the Faculty of Computer Science: university name (or logo) on top, institute and its address as separate blocks, fixed positions for thesis type, title, author, and the examination data. The postal code is written without the "D–" prefix.
 - The package requires LaTeX 2020-10-01 or newer.
+- English cover labels follow the layout requirements: "Study program", "Advisor", "Start date", and "End date".
+- The option `supervisor` is now called `advisor`. The old name still works.
 
 ### Fixed
 

@@ -52,7 +52,8 @@
 \DeclareStringOption[]{number} % running number
 \DeclareStringOption[cs]{course}
 \DeclareStringOption[examiner not set]{examiner}
-\DeclareStringOption[supervisor not set]{supervisor}
+\DeclareStringOption[advisor not set]{advisor}
+\define@key{MCS}{supervisor}{\def\MCS@advisor{#1}} % old name of advisor, kept for backwards compatibility
 \DeclareStringOption[startdate not set]{startdate}
 \DeclareStringOption[enddate not set]{enddate}
 \DeclareStringOption[]{logo}
@@ -76,11 +77,10 @@
 \def\labelsenglish{
     \gdef\@labelExaminer{Examiner}%
     %\gdef\@labelprueferin{Examiner}%
-    \gdef\@labelSupvervisor{Supervisor}%
-    %\gdef\@labelbetreuerin{Supervisor}%
-    \gdef\@labelCourse{Course of Study}%
-    \gdef\@labelStartdate{Commenced}%
-    \gdef\@labelEnddate{Completed}%
+    \gdef\@labelAdvisor{Advisor}%
+    \gdef\@labelCourse{Study program}%
+    \gdef\@labelStartdate{Start date}%
+    \gdef\@labelEnddate{End date}%
     \gdef\@labelUniversity{University of Stuttgart}%
     \gdef\@labelDept{Faculty of Computer Science}%
 
@@ -133,7 +133,7 @@
 
 \def\labelsgerman{
     \gdef\@labelExaminer{Prüfer/in}%
-    \gdef\@labelSupvervisor{Betreuer/in}%
+    \gdef\@labelAdvisor{Betreuer/in}%
     \gdef\@labelCourse{Studiengang}%
     \gdef\@labelStartdate{Beginn am}%
     \gdef\@labelEnddate{Beendet am}%
@@ -313,7 +313,7 @@
             \USCCover@at{152mm}{100mm}{\fontsize{12pt}{14pt}\selectfont\MCS@author}
             \USCCover@field{224mm}{\@labelCourse}{\@labelCourseValue}
             \USCCover@field{232mm}{\@labelExaminer}{\MCS@examiner}
-            \USCCover@field{247mm}{\@labelSupvervisor}{\MCS@supervisor}
+            \USCCover@field{247mm}{\@labelAdvisor}{\MCS@advisor}
             \USCCover@field{262mm}{\@labelStartdate}{\MCS@startdate}
             \USCCover@field{270mm}{\@labelEnddate}{\MCS@enddate}
         \end{picture}}}
