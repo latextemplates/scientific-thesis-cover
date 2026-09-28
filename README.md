@@ -32,9 +32,9 @@ Just include the package with all options specified:
         author={Max Musterjunge},
         type=bachelor,
         institute=iaas,
-        course=cs,
+        studyprogram=cs,
         examiner={Prof.\ Dr.\ Hans Mustermann},
-        supervisor={Otto Normalverbraucher, M.Sc.},
+        advisor={Otto Normalverbraucher, M.Sc.},
         startdate={2012-06-01},
         enddate={2012-12-01},
         language=english,
@@ -88,20 +88,20 @@ This package supports the following options:
     - `institute=fac` will state Faculty of Computer Science
     - Arbitrary strings are possible: `institute={Custom fictional institute}` will state Custom fictional institute
 
-- course: Type of study. May be set to one of the following values or arbitrary text in curly braces:
-    - `course=cs` will state that your course of study is Computer Science
-    - `course=se` will state that your course of study is Software Engineering
-    - `course=mcl` will state that your course of study is Master Computational Linguistics
-    - `course=msv` will state that your course of study is Maschinelle Sprachverarbeitung
-    - `course=bis` will state that your course of study is Business Information Systems
-    - `course=simtech` will state that your course of study is Simulation Technology
-    - Arbitrary strings are possible: `course={New Study course}` will state that your course of study is New Study course
+- studyprogram: Your study program. The old name `course` still works. May be set to one of the following values or arbitrary text in curly braces:
+    - `studyprogram=cs` will state that your study program is Computer Science
+    - `studyprogram=se` will state that your study program is Software Engineering
+    - `studyprogram=mcl` will state that your study program is Master Computational Linguistics
+    - `studyprogram=msv` will state that your study program is Maschinelle Sprachverarbeitung
+    - `studyprogram=bis` will state that your study program is Business Information Systems
+    - `studyprogram=simtech` will state that your study program is Simulation Technology
+    - Arbitrary strings are possible: `studyprogram={New Study program}` will state that your study program is New Study program
 
 - examiner: Your examiner.
     - `examiner={Prof.\ Dr.\ Hans Mustermann}`
 
-- supervisor: Your supervisor.
-    - `supervisor={Otto Normalverbraucher, M.Sc.}`
+- advisor: Your advisor. The old name `supervisor` still works.
+    - `advisor={Otto Normalverbraucher, M.Sc.}`
 
 - startdate: Startdate of your work.
   Preferably ISO-8601. See <https://xkcd.com/1179/> and <https://www.explainxkcd.com/wiki/index.php/1179:_ISO_8601>.
@@ -119,6 +119,10 @@ This package supports the following options:
     - `number=1234` will label your work to have number 1234
 - logo: Adds a logo, e.g. of your university, at the top of the coverpage.
     - The image's path can not contain any underscores!
+    - Without a logo, the name of the university is printed in its place.
+    - The logo of the University of Stuttgart is not bundled (trademark).
+      Get it from the [corporate design portal](https://www.beschaeftigte.uni-stuttgart.de/uni-services/kommunikation-und-marketing/corporate-design/logo-und-schrift/) or from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Uni_stuttgart_logo.svg) (German version only).
+      pdflatex cannot include SVG files, so convert it first, e.g., `inkscape Uni_stuttgart_logo.svg -o unilogo.pdf`.
 - `setPageNumberToOne=true` will set the page after the cover to `1` (default false)
 - `setCoverPageNumberToMinusOne=true` will set `-1` as the page number for the cover page (default false)
 
