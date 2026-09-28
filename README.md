@@ -119,6 +119,10 @@ This package supports the following options:
     - `number=1234` will label your work to have number 1234
 - logo: Adds a logo, e.g. of your university, at the top of the coverpage.
     - The image's path can not contain any underscores!
+    - Without a logo, the name of the university is printed in its place.
+    - The logo of the University of Stuttgart is not bundled (trademark).
+      Get it from the [corporate design portal](https://www.beschaeftigte.uni-stuttgart.de/uni-services/kommunikation-und-marketing/corporate-design/logo-und-schrift/) or from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Uni_stuttgart_logo.svg) (German version only).
+      pdflatex cannot include SVG files, so convert it first, e.g., `inkscape Uni_stuttgart_logo.svg -o unilogo.pdf`.
 - `setPageNumberToOne=true` will set the page after the cover to `1` (default false)
 - `setCoverPageNumberToMinusOne=true` will set `-1` as the page number for the cover page (default false)
 
