@@ -17,6 +17,8 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 ### Fixed
 
 - The cover page is now centered regardless of the margins set by the document class or packages such as `geometry` (e.g., with the masters-doctoral-thesis template). See [#9](https://github.com/latextemplates/scientific-thesis-cover/issues/9).
+- A custom institute with several lines (`institute={...\\...}`) is centered line by line. See [latextemplates/scientific-thesis-template#145](https://github.com/latextemplates/scientific-thesis-template/issues/145).
+- Option values may contain `\\` and commands, e.g., a department below the institute or two advisors; `kvoptions-patch` is only needed with an older LaTeX distribution. See [#4](https://github.com/latextemplates/scientific-thesis-cover/issues/4) and [#5](https://github.com/latextemplates/scientific-thesis-cover/issues/5).
 - German declaration: "Hilfsmitel" is now spelled "Hilfsmittel". See [latextemplates/scientific-thesis-template#191](https://github.com/latextemplates/scientific-thesis-template/issues/191).
 
 ## [4.1.0] - 2026-06-12

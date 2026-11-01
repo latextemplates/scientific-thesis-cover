@@ -87,6 +87,7 @@ This package supports the following options:
     - `institute=sec` will state Institute of Information Security
     - `institute=fac` will state Faculty of Computer Science
     - Arbitrary strings are possible: `institute={Custom fictional institute}` will state Custom fictional institute
+    - Several lines, e.g., for a department: `institute={IPVS\\Department of Applications of Parallel and Distributed Systems}` (see [Multi-line values](#multi-line-values))
 
 - studyprogram: Your study program. The old name `course` still works. May be set to one of the following values or arbitrary text in curly braces:
     - `studyprogram=cs` will state that your study program is Computer Science
@@ -126,9 +127,15 @@ This package supports the following options:
 - `setPageNumberToOne=true` will set the page after the cover to `1` (default false)
 - `setCoverPageNumberToMinusOne=true` will set `-1` as the page number for the cover page (default false)
 
-## Known Problems
+## Multi-line values
 
-Multiline/Commands in option values are currently only supported if you load `kvoptions-patch` **before** the documentclass definition like this:
+Option values may contain `\\` and commands, e.g., to state a department below the institute or to name two advisors:
+
+    institute={IPVS\\Department of Applications of Parallel and Distributed Systems\\Universitätsstraße 38\\70569 Stuttgart},
+    advisor={Otto Normalverbraucher,\ M.Sc.\\Prof.\ Dr.\ Black},
+
+Each block is centered (institute) or left-aligned (examination data) line by line.
+With an older LaTeX distribution, load `kvoptions-patch` **before** the document class to keep `\\` in option values:
 
     \RequirePackage{kvoptions-patch}
     \documentclass[twoside]{article}
