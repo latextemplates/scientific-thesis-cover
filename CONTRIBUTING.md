@@ -25,3 +25,11 @@ Create a pull request on GitHub.
 For text inspirations, consider [How to write the perfect pull request](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/).
 
 You can add the prefix `[WIP]` to indicate that the pull request is not yet complete, but you want to discuss something or inform about the current state of affairs.
+
+## Releasing a new version
+
+1. Bump the version in `scientific-thesis-cover.sty`: the date in `\ProvidesPackage` and the version in the `\typeout` line below it.
+2. Rename `## [Unreleased]` in `CHANGELOG.md` to `## [<version>] - <YYYY-MM-DD>` and add the compare link at the end of the file; `jbang com.github.nbbrd.heylogs:heylogs-cli:0.18.1:bin check CHANGELOG.md` has to report no problem.
+3. Commit `Release <version>`, tag `<version>`, push commit and tag.
+4. Create the GitHub release with that CHANGELOG section as notes: `gh release create <version> --title <version> --notes-file <section.md>`.
+   The `ctan` workflow builds the CTAN archive (`release.sh`) on the tag; download it from the workflow run and upload it to CTAN by hand.
