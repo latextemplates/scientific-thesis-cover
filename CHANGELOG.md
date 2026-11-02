@@ -9,7 +9,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 
 ### Added
 
-- Types of the project modules of the Bachelor programmes (Amtliche Bekanntmachung Nr. 26/2025): `type=forschungsprojekt` (Bachelor-Forschungsprojekt Informatik), `type=projektaids` (Projekt Artificial Intelligence and Data Science), `type=studienprojektmi` (Studienprojekt Medieninformatik), `type=studienprojektse` (Studienprojekt Software Engineering).
+- Types of the project modules of the Bachelor programmes ([Amtliche Bekanntmachung Nr. 26/2025](https://www.uni-stuttgart.de/universitaet/aktuelles/bekanntmachungen/dokumente/bekanntm_26_2025.pdf)): `type=forschungsprojekt` (Bachelor-Forschungsprojekt Informatik), `type=projektaids` (Projekt Artificial Intelligence and Data Science), `type=studienprojektmi` (Studienprojekt Medieninformatik), `type=studienprojektse` (Studienprojekt Software Engineering).
 - `institute=istesqa` for the group Software Quality and Architecture of the Institute of Software Engineering.
 - `studyprogram=aids` (Artificial Intelligence and Data Science) and `studyprogram=swe` (Software Engineering).
 
