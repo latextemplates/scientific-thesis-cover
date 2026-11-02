@@ -72,6 +72,10 @@ This package supports the following options:
     - `type=study` will label your work as Student Research Project
     - `type=projectinf` will label your work as Projekt-INF
     - `type=prozessanalyse` will label your work as Prozessanalyse
+    - `type=forschungsprojekt` will label your work as Bachelor-Forschungsprojekt Informatik
+    - `type=projektaids` will label your work as Projekt Artificial Intelligence and Data Science
+    - `type=studienprojektmi` will label your work as Studienprojekt Medieninformatik
+    - `type=studienprojektse` will label your work as Studienprojekt Software Engineering
     - Arbitrary strings are also possible: `type={research project}` will label your work as "research project"
 
 - institute: States for which institute you are doing this work. May be set to one of the following values or arbitrary text in curly braces:
@@ -80,6 +84,7 @@ This package supports the following options:
     - `institute=fmi` will state Institute of Formal Methods in Computer Science
     - `institute=ims` will state Institute for Natural Language Processing
     - `institute=iste` will state Institute of Software Engineering
+    - `institute=istesqa` will state Institute of Software Engineering, Software Quality and Architecture (on two lines)
     - `institute=iti` will state Institute of Computer Architecture and Computer Engineering
     - `institute=iris` will state Institute of Computer-aided Product Development Systems
     - `institute=vis` will state Institute of Visualization and Interactive Systems
@@ -96,6 +101,9 @@ This package supports the following options:
     - `studyprogram=msv` will state that your study program is Maschinelle Sprachverarbeitung
     - `studyprogram=bis` will state that your study program is Business Information Systems
     - `studyprogram=simtech` will state that your study program is Simulation Technology
+    - `studyprogram=medinf` will state that your study program is Medieninformatik
+    - `studyprogram=aids` will state that your study program is Artificial Intelligence and Data Science
+    - `studyprogram=swe` will state that your study program is Software Engineering (the Bachelor programme since 2025; `se` gives the older name Softwaretechnik)
     - Arbitrary strings are possible: `studyprogram={New Study program}` will state that your study program is New Study program
 
 - examiner: Your examiner.

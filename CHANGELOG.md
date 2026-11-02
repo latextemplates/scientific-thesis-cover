@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 Since version 4.0.0, this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [5.1.0] - 2026-11-03
+
+### Added
+
+- Types of the project modules of the Bachelor programmes (Amtliche Bekanntmachung Nr. 26/2025): `type=forschungsprojekt` (Bachelor-Forschungsprojekt Informatik), `type=projektaids` (Projekt Artificial Intelligence and Data Science), `type=studienprojektmi` (Studienprojekt Medieninformatik), `type=studienprojektse` (Studienprojekt Software Engineering).
+- `institute=istesqa` for the group Software Quality and Architecture of the Institute of Software Engineering.
+- `studyprogram=aids` (Artificial Intelligence and Data Science) and `studyprogram=swe` (Software Engineering).
+
 ## [5.0.1] - 2026-11-02
 
 ### Fixed
@@ -111,6 +119,7 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 - First release, versioned outside of GitHub.
 
 [Unreleased]: https://github.com/latextemplates/scientific-thesis-cover/compare/5.0.0...HEAD
+[5.1.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/5.0.1...5.1.0
 [5.0.1]: https://github.com/latextemplates/scientific-thesis-cover/compare/5.0.0...5.0.1
 [5.0.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.1.0...5.0.0
 [4.1.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.0.2...4.1.0

@@ -44,6 +44,7 @@ jobs:
             TEST_english_oneside \
             TEST_english_oneside_no_number \
             TEST_english_multiline \
+            TEST_english_istesqa \
             TEST_english_twoside \
             TEST_german_oneside \
             TEST_german_twoside
