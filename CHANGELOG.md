@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 Since version 4.0.0, this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [5.2.0] - 2026-11-03
+
+### Added
+
+- Option `department` to state the department on its own line below the institute, e.g., `institute=ipvs, department={Abteilung Anwendersoftware}`. See [#5](https://github.com/latextemplates/scientific-thesis-cover/issues/5).
+
 ## [5.1.0] - 2026-11-02
 
 ### Added
@@ -118,7 +124,8 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 
 - First release, versioned outside of GitHub.
 
-[Unreleased]: https://github.com/latextemplates/scientific-thesis-cover/compare/5.0.0...HEAD
+[Unreleased]: https://github.com/latextemplates/scientific-thesis-cover/compare/5.2.0...HEAD
+[5.2.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/5.1.0...5.2.0
 [5.1.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/5.0.1...5.1.0
 [5.0.1]: https://github.com/latextemplates/scientific-thesis-cover/compare/5.0.0...5.0.1
 [5.0.0]: https://github.com/latextemplates/scientific-thesis-cover/compare/4.1.0...5.0.0

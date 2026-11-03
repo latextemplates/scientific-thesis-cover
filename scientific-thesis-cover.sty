@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}[2020/10/01] % shipout hooks
 \newcommand{\USCCover@Pgkname}{scientific-thesis-cover}
-\ProvidesPackage{\USCCover@Pgkname}[2026/11/02 Cover and affirmation for scientific works.]
-\typeout{Package: `\USCCover@Pgkname' v5.1.0}
+\ProvidesPackage{\USCCover@Pgkname}[2026/11/03 Cover and affirmation for scientific works.]
+\typeout{Package: `\USCCover@Pgkname' v5.2.0}
 % ------------------------------
 % required packages
 % ------------------------------
@@ -50,6 +50,7 @@
 \DeclareStringOption[author not set]{author}
 \DeclareStringOption[bachelor]{type}
 \DeclareStringOption[fac]{institute}
+\DeclareStringOption[]{department} % printed below the institute
 \DeclareStringOption[]{number} % running number
 \DeclareStringOption[cs]{studyprogram}
 \define@key{MCS}{course}{\def\MCS@studyprogram{#1}} % old name of studyprogram, kept for backwards compatibility
@@ -328,7 +329,7 @@
             \else
                 \put(0,-26mm){\makebox[\paperwidth]{\includegraphics[height=14mm]{\MCS@logo}}}
             \fi
-            \USCCover@at{33mm}{100mm}{\@labelInstitute}
+            \USCCover@at{33mm}{100mm}{\@labelInstitute\ifx\MCS@department\empty\else\\\MCS@department\fi}
             \USCCover@at{53mm}{100mm}{\@labelInstituteAddress}
             \USCCover@at{100mm}{100mm}{\fontsize{12pt}{14pt}\selectfont\textbf{%
                     \@labelType\ifx\MCS@number\empty\else\ Nr.\,\MCS@number\fi}}
