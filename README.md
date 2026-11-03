@@ -81,10 +81,11 @@ This package supports the following options:
 - institute: States for which institute you are doing this work. May be set to one of the following values or arbitrary text in curly braces:
     - `institute=iaas` will state Institute of Architecture of Application Systems
     - `institute=ipvs` will state Institute for Parallel and Distributed Systems
+    - `institute=ipvsas` will state Institute for Parallel and Distributed Systems with department Application of Parallel and Distributed Systems (German: Anwendersoftware)
     - `institute=fmi` will state Institute of Formal Methods in Computer Science
     - `institute=ims` will state Institute for Natural Language Processing
     - `institute=iste` will state Institute of Software Engineering
-    - `institute=istesqa` will state Institute of Software Engineering, Software Quality and Architecture (on two lines)
+    - `institute=istesqa` will state Institute of Software Engineering with department Software Quality and Architecture
     - `institute=iti` will state Institute of Computer Architecture and Computer Engineering
     - `institute=iris` will state Institute of Computer-aided Product Development Systems
     - `institute=vis` will state Institute of Visualization and Interactive Systems
@@ -92,7 +93,10 @@ This package supports the following options:
     - `institute=sec` will state Institute of Information Security
     - `institute=fac` will state Faculty of Computer Science
     - Arbitrary strings are possible: `institute={Custom fictional institute}` will state Custom fictional institute
-    - Several lines, e.g., for a department: `institute={IPVS\\Department of Applications of Parallel and Distributed Systems}` (see [Multi-line values](#multi-line-values))
+    - Several lines, e.g., for a department: `institute={IPVS\\Application of Parallel and Distributed Systems}` (see [Multi-line values](#multi-line-values))
+
+- department: Department of the institute, printed on its own line below the institute. Arbitrary text in curly braces; overrides the department of `istesqa` and `ipvsas`:
+    - `department={Application of Parallel and Distributed Systems}`
 
 - studyprogram: Your study program. The old name `course` still works. May be set to one of the following values or arbitrary text in curly braces:
     - `studyprogram=cs` will state that your study program is Computer Science
@@ -139,7 +143,7 @@ This package supports the following options:
 
 Option values may contain `\\` and commands, e.g., to state a department below the institute or to name two advisors:
 
-    institute={IPVS\\Department of Applications of Parallel and Distributed Systems\\Universitätsstraße 38\\70569 Stuttgart},
+    institute={IPVS\\Application of Parallel and Distributed Systems},
     advisor={Otto Normalverbraucher,\ M.Sc.\\Prof.\ Dr.\ Black},
 
 Each block is centered (institute) or left-aligned (examination data) line by line.
