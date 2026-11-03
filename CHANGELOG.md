@@ -10,6 +10,11 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 ### Added
 
 - Option `department` to state the department on its own line below the institute, e.g., `institute=ipvs, department={Anwendersoftware}`. See [#5](https://github.com/latextemplates/scientific-thesis-cover/issues/5).
+- `institute=ipvsas` for the department Anwendersoftware (Application of Parallel and Distributed Systems) of the Institute for Parallel and Distributed Systems.
+
+### Changed
+
+- `institute=istesqa` sets the institute and the department; `department` overrides it.
 
 ## [5.1.0] - 2026-11-02
 
