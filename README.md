@@ -92,10 +92,10 @@ This package supports the following options:
     - `institute=sec` will state Institute of Information Security
     - `institute=fac` will state Faculty of Computer Science
     - Arbitrary strings are possible: `institute={Custom fictional institute}` will state Custom fictional institute
-    - Several lines are possible (see [Multi-line values](#multi-line-values))
+    - Several lines, e.g., for a department: `institute={IPVS\\Application of Parallel and Distributed Systems}` (see [Multi-line values](#multi-line-values))
 
 - department: Department of the institute, printed on its own line below the institute. Arbitrary text in curly braces:
-    - `department={Department of Applications of Parallel and Distributed Systems}`
+    - `department={Application of Parallel and Distributed Systems}`
 
 - studyprogram: Your study program. The old name `course` still works. May be set to one of the following values or arbitrary text in curly braces:
     - `studyprogram=cs` will state that your study program is Computer Science
@@ -140,9 +140,9 @@ This package supports the following options:
 
 ## Multi-line values
 
-Option values may contain `\\` and commands, e.g., to state a custom address below the institute or to name two advisors:
+Option values may contain `\\` and commands, e.g., to state a department below the institute or to name two advisors:
 
-    institute={IPVS\\Universitätsstraße 38\\70569 Stuttgart},
+    institute={IPVS\\Application of Parallel and Distributed Systems},
     advisor={Otto Normalverbraucher,\ M.Sc.\\Prof.\ Dr.\ Black},
 
 Each block is centered (institute) or left-aligned (examination data) line by line.
