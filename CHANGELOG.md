@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 Since version 4.0.0, this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- Option `ustutt` sets the cover page in the layout of version 4 (until 2026-10), as expected by the University of Stuttgart. The labels of version 5 ("Study program", "Advisor", "Start date", "End date") are kept.
+
+### Fixed
+
+- Several advisors or examiners (separated by `\\`) are labeled in the plural: "Advisors", "Examiners", "Betreuer/innen", "Prüfer/innen".
+
 ## [5.2.0] - 2026-11-03
 
 ### Added

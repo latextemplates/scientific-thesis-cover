@@ -47,7 +47,9 @@ jobs:
             TEST_english_istesqa \
             TEST_english_twoside \
             TEST_german_oneside \
-            TEST_german_twoside
+            TEST_german_twoside \
+            TEST_english_ustutt \
+            TEST_german_ustutt
           do
             pdflatex -interaction=nonstopmode -halt-on-error "$f.tex"
           done
