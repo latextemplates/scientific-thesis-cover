@@ -9,11 +9,11 @@ Since version 4.0.0, this project adheres to [Semantic Versioning](https://semve
 
 ### Added
 
-- Option `ustutt` sets the cover page in the layout of version 4 (until 2026-10), as expected by the University of Stuttgart. The labels of version 5 ("Study program", "Advisor", "Start date", "End date") are kept.
+- Option `ustutt` sets the cover page in the layout of version 4 (until 2026-10), as expected by the University of Stuttgart, including the English labels of version 4 ("Course of Study", "Supervisor", "Commenced", "Completed").
 
 ### Fixed
 
-- Several advisors or examiners (separated by `\\`) are labeled in the plural: "Advisors", "Examiners", "Betreuer/innen", "Prüfer/innen".
+- Several advisors or examiners (separated by `\\`) are labeled in the plural: "Advisors" (with `ustutt`: "Supervisors"), "Examiners", "Betreuer/innen", "Prüfer/innen".
 
 ## [5.2.0] - 2026-11-03
 

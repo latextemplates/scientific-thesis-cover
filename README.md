@@ -136,7 +136,7 @@ This package supports the following options:
     - The logo of the University of Stuttgart is not bundled (trademark).
       Get it from the [corporate design portal](https://www.beschaeftigte.uni-stuttgart.de/uni-services/kommunikation-und-marketing/corporate-design/logo-und-schrift/) or from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Uni_stuttgart_logo.svg) (German version only).
       pdflatex cannot include SVG files, so convert it first, e.g., `inkscape Uni_stuttgart_logo.svg -o unilogo.pdf`.
-- `ustutt` sets the cover page in the layout of version 4 (until 2026-10): institute, university, and address as one block; thesis type, title, and author in a common box. The labels stay those of version 5.
+- `ustutt` sets the cover page in the layout of version 4 (until 2026-10): institute, university, and address as one block; thesis type, title, and author in a common box. The English labels are those of version 4, too ("Course of Study", "Supervisor", "Commenced", "Completed").
 - `setPageNumberToOne=true` will set the page after the cover to `1` (default false)
 - `setCoverPageNumberToMinusOne=true` will set `-1` as the page number for the cover page (default false)
 
