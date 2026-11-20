@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 Since version 4.0.0, this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+
+- The cover page works with tagged PDF (`\DocumentMetadata{tagging=on}`, see the [LaTeX Tagging Project](https://latex3.github.io/tagging-project/)): its text is tagged instead of being hidden in the figure of the logo, and the logo has the university name as alternative text.
+
 ## [5.3.0] - 2026-11-20
 
 ### Added

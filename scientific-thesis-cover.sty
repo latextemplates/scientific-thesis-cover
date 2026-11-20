@@ -321,15 +321,15 @@
 
 % #1: distance from the top edge of the paper to the first baseline,
 % #2: width, #3: content (centered horizontally on the paper)
-% To be used inside \USCCover@page only.
+% To be used inside \USCCover@typeset only.
 \newcommand{\USCCover@at}[3]{%
-    \put(\dimexpr(\paperwidth-#2)/2\relax,-#1){\parbox[t]{#2}{\centering #3}}}
+    \USCCover@put{(\paperwidth-#2)/2}{-#1}{\parbox[t]{#2}{\centering #3}}}
 
 % #1: distance from the top edge of the paper to the baseline, #2: label, #3: value
 % The label column starts 50mm left of the middle of the paper, the value column 33mm after that.
 \newcommand{\USCCover@field}[3]{%
-    \put(\dimexpr\paperwidth/2-50mm\relax,-#1){\textbf{#2:}}%
-    \put(\dimexpr\paperwidth/2-17mm\relax,-#1){\parbox[t]{85mm}{\raggedright #3}}}
+    \USCCover@put{\paperwidth/2-50mm}{-#1}{\textbf{#2:}}%
+    \USCCover@put{\paperwidth/2-17mm}{-#1}{\parbox[t]{85mm}{\raggedright #3}}}
 
 % #1: value, #2: singular label, #3: plural label
 % Several names (separated by \\) take the plural label.
@@ -399,7 +399,7 @@
                 \else
                     \vbox to 15mm{
                             \begin{center}
-                                \includegraphics[height=14mm]{\MCS@logo}
+                                \includegraphics[height=14mm,alt={\@labelUniversity}]{\MCS@logo}
                             \end{center}
                             \vfill}
                     % Height of institute vbox reduced to accomodate logo
@@ -460,22 +460,27 @@
                 \vss}\hss}%
 }
 
-\newsavebox{\USCCover@page}
+% #1, #2: x and y position of the reference point of #3, relative to the origin set by \USCCover@typeset
+% Plain boxes instead of a picture environment: with PDF tagging, LaTeX tags a picture as one figure, which would hide the text.
+\newcommand{\USCCover@put}[3]{\rlap{\kern\dimexpr#1\relax\raisebox{\dimexpr#2\relax}[0pt][0pt]{#3}}\ignorespaces}
+
+% The cover sits on the first baseline of the page body; its origin is moved to the top left corner of the paper.
+% It is typeset in the page body (not in a shipout hook), so that its content is part of the PDF structure when tagging is enabled.
 \newcommand{\USCCover@typeset}{%
-    \global\sbox{\USCCover@page}{%
+    \par\noindent{%
         \sffamily\frenchspacing\fontsize{11pt}{13.6pt}\selectfont
-        \begin{picture}(0,0)
+        \USCCover@put{-1in-\oddsidemargin}{1in+\topmargin+\headheight+\headsep+\topskip}{%
             \ifx\MCS@logo\empty
                 \USCCover@at{20mm}{100mm}{\fontsize{14pt}{17pt}\selectfont\textbf{\@labelUniversity}}
             \else
-                \put(0,-26mm){\makebox[\paperwidth]{\includegraphics[height=14mm]{\MCS@logo}}}
+                \USCCover@put{0pt}{-26mm}{\makebox[\paperwidth]{\includegraphics[height=14mm,alt={\@labelUniversity}]{\MCS@logo}}}
             \fi
             \USCCover@at{33mm}{100mm}{\@labelInstitute\ifx\@labelDepartment\empty\else\\\@labelDepartment\fi}
             \USCCover@at{53mm}{100mm}{\@labelInstituteAddress}
             \USCCover@at{100mm}{100mm}{\fontsize{12pt}{14pt}\selectfont\textbf{%
                     \@labelType\ifx\MCS@number\empty\else\ Nr.\,\MCS@number\fi}}
             % title box: 104mm to 147mm from the top, title centered vertically
-            \put(\dimexpr(\paperwidth-100mm)/2\relax,-147mm){\fboxsep=0pt\@USCCover@umrandet{%
+            \USCCover@put{(\paperwidth-100mm)/2}{-147mm}{\fboxsep=0pt\@USCCover@umrandet{%
                         \parbox[b][43mm][c]{100mm}{\centering\fontsize{17.28pt}{22pt}\selectfont\textbf{\MCS@title}}}}
             \USCCover@at{152mm}{100mm}{\fontsize{12pt}{14pt}\selectfont\MCS@author}
             \USCCover@field{224mm}{\@labelCourse}{\@labelCourseValue}
@@ -483,7 +488,7 @@
             \USCCover@field{247mm}{\USCCover@advisorlabel}{\MCS@advisor}
             \USCCover@field{262mm}{\@labelStartdate}{\MCS@startdate}
             \USCCover@field{270mm}{\@labelEnddate}{\MCS@enddate}
-        \end{picture}}}
+        }}\par}
 
 % ------------------------------
 % usable commands
@@ -501,8 +506,6 @@
         \USCCover@classic
     \else
         \USCCover@typeset
-        \AddToHookNext{shipout/foreground}{\put(0,0){\usebox{\USCCover@page}}}%
-        \null
     \fi
     \thispagestyle{empty}%
     \cleardoublepage % if twoside add a blank page after cover
