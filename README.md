@@ -156,20 +156,20 @@ With an older LaTeX distribution, load `kvoptions-patch` **before** the document
 ## How to release
 
 1. Check if indent is correct: `latexindent -y="indentPreamble:1,defaultIndent:'    '" -m -w scientific-thesis-cover.sty`
-1. Adapt `CHANGELOG.md`
-2. Adapt version and date in `scientific-thesis-cover.sty`
-3. Tag the release commit using `git tag`
-4. Push to GitHub
-5. Add CHANGELOG part to GitHub release manually, because [github-release-from-changelog](https://github.com/MoOx/github-release-from-changelog) currently works with `package.json`  only.
-6. Publish to CTAN
-  - Pre-conditions:
-    - Windows: Patch `C:\MiKTeX\scripts\ctanify\ctanify`: Remove `-y` from `zip` command line arguments `zip -q -r -9 -y -m`.
-    - Windows: Environment variable `TMP` must not contain backslashes. E.g., `C:/TEMP/WIN` is good, `C:\Users\user\AppData\Local\Temp` is bad.
-    - Have `pandoc` and `sed` in the path.
-  - Run `release.bat`.
-  - Go to <https://ctan.org/pkg/scientific-thesis-cover>, choose "Upload"
-  - Use `scientific-thesis-cover.tar.gz` as archive.
-7. Adapt `CHANGELOG.md` to contain `## [unreleased]` again.
+2. Adapt `CHANGELOG.md`
+3. Adapt version and date in `scientific-thesis-cover.sty`
+4. Tag the release commit using `git tag`
+5. Push to GitHub
+6. Add CHANGELOG part to GitHub release manually, because [github-release-from-changelog](https://github.com/MoOx/github-release-from-changelog) currently works with `package.json`  only.
+7. Publish to CTAN
+   - Pre-conditions:
+      - Windows: Patch `C:\MiKTeX\scripts\ctanify\ctanify`: Remove `-y` from `zip` command line arguments `zip -q -r -9 -y -m`.
+      - Windows: Environment variable `TMP` must not contain backslashes. E.g., `C:/TEMP/WIN` is good, `C:\Users\user\AppData\Local\Temp` is bad.
+      - Have `pandoc` and `sed` in the path.
+   - Run `release.sh` (Linux) or `release.bat` (Windows). The `CTAN` workflow also builds the archive on every push (artifact `ctan-archive`).
+   - Go to <https://ctan.org/pkg/scientific-thesis-cover>, choose "Upload"
+   - Use `scientific-thesis-cover.tar.gz` as archive.
+8. Adapt `CHANGELOG.md` to contain `## [unreleased]` again.
 
 ## License
 
