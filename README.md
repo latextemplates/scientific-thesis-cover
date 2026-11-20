@@ -11,6 +11,7 @@ Please report issues concerning this package at the GitHub repository at <https:
 
 - utf8
 - options for all required text on the coverpage
+- tagged PDF: with `\DocumentMetadata{tagging=on}` (see the [LaTeX Tagging Project](https://latex3.github.io/tagging-project/)), the cover page and the affirmation are tagged, and the logo gets the university name as alternative text; see [`tests/TEST_english_tagged.tex`](tests/TEST_english_tagged.tex)
 
 ## Installation
 

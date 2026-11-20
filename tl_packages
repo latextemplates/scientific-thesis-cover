@@ -13,11 +13,14 @@
 #
 # Verified by installing exactly this list on a scheme-infraonly TeX Live
 # (no Metafont, as install-texlive provides) and compiling all documents.
+# The tagged test (lualatex) additionally needs latex-lab, tagpdf, pdfmanagement, luaotfload (with context), and luamml.
 amsfonts
+amsmath
 babel
 babel-german
 blindtext
 cm
+context
 csquotes
 dvips
 epstopdf-pkg
@@ -25,9 +28,12 @@ etoolbox
 graphics
 graphics-cfg
 graphics-def
+grfext
 hyphen-german
 iftex
+infwarerr
 koma-script
+kvdefinekeys
 kvoptions
 kvsetkeys
 l3kernel
@@ -35,14 +41,20 @@ l3packages
 latex
 latex-bin
 latex-fonts
+latex-lab
 latexconfig
 latexmk
 lipsum
 lm
 ltxcmds
+luamml
+luaotfload
 luatex
 mathpazo
 mwe
 palatino
+pdfmanagement
+pdftexcmds
 psnfss
+tagpdf
 tools

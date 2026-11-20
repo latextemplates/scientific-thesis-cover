@@ -53,6 +53,9 @@ jobs:
           do
             pdflatex -interaction=nonstopmode -halt-on-error "$f.tex"
           done
+          lualatex -interaction=nonstopmode -halt-on-error TEST_english_tagged.tex
+          lualatex -interaction=nonstopmode -halt-on-error TEST_english_tagged.tex
+          ! grep "Alternative text for graphic is missing" TEST_english_tagged.log
 
       - name: Assemble site
         run: |
