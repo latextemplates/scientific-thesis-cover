@@ -57,6 +57,11 @@ jobs:
           lualatex -interaction=nonstopmode -halt-on-error TEST_english_tagged.tex
           ! grep "Alternative text for graphic is missing" TEST_english_tagged.log
 
+      - name: Validate tagged PDF against PDF/UA-2
+        run: |
+          docker run --rm -v "$PWD/tests:/d" verapdf/cli@sha256:c2ac9448973a56acd833c81441e38d2dca58ea26a2ce1621e9a32e85d3d2728f -f ua2 --format text /d/TEST_english_tagged.pdf | tee verapdf.txt
+          grep -q '^PASS ' verapdf.txt || { docker run --rm -v "$PWD/tests:/d" verapdf/cli@sha256:c2ac9448973a56acd833c81441e38d2dca58ea26a2ce1621e9a32e85d3d2728f -f ua2 --format text --verbose /d/TEST_english_tagged.pdf; exit 1; }
+
       - name: Assemble site
         run: |
           mkdir build
