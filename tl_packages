@@ -27,6 +27,7 @@ graphics-cfg
 graphics-def
 hyphen-german
 iftex
+koma-script
 kvoptions
 kvsetkeys
 l3kernel
