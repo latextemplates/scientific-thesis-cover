@@ -35,8 +35,8 @@ Just include the package with all options specified:
         studyprogram=cs,
         examiner={Prof.\ Dr.\ Hans Mustermann},
         advisor={Otto Normalverbraucher, M.Sc.},
-        startdate={2012-06-01},
-        enddate={2012-12-01},
+        startdate={2027-04-01},
+        enddate={2027-09-30},
         language=english,
         logo={unilogo}
     ]{scientific-thesis-cover}
@@ -118,10 +118,10 @@ This package supports the following options:
 
 - startdate: Startdate of your work.
   Preferably ISO-8601. See <https://xkcd.com/1179/> and <https://www.explainxkcd.com/wiki/index.php/1179:_ISO_8601>.
-    - `startdate={2012-06-01}`
+    - `startdate={2027-04-01}`
 
 - enddate: Enddate of your work.
-    - `enddate={2012-12-01}`
+    - `enddate={2027-09-30}`
 
 - crk: CR-Classification codes of your work. May be separated by commas:
     - `crk={A.1, A.2}`
@@ -136,6 +136,7 @@ This package supports the following options:
     - The logo of the University of Stuttgart is not bundled (trademark).
       Get it from the [corporate design portal](https://www.beschaeftigte.uni-stuttgart.de/uni-services/kommunikation-und-marketing/corporate-design/logo-und-schrift/) or from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Uni_stuttgart_logo.svg) (German version only).
       pdflatex cannot include SVG files, so convert it first, e.g., `inkscape Uni_stuttgart_logo.svg -o unilogo.pdf`.
+- `ustutt` sets the cover page in the layout of version 4 (until 2026-10): institute, university, and address as one block; thesis type, title, and author in a common box. The English labels are those of version 4, too ("Course of Study", "Supervisor", "Commenced", "Completed").
 - `setPageNumberToOne=true` will set the page after the cover to `1` (default false)
 - `setCoverPageNumberToMinusOne=true` will set `-1` as the page number for the cover page (default false)
 
