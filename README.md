@@ -35,8 +35,8 @@ Just include the package with all options specified:
         studyprogram=cs,
         examiner={Prof.\ Dr.\ Hans Mustermann},
         advisor={Otto Normalverbraucher, M.Sc.},
-        startdate={2012-06-01},
-        enddate={2012-12-01},
+        startdate={2027-04-01},
+        enddate={2027-09-30},
         language=english,
         logo={unilogo}
     ]{scientific-thesis-cover}
@@ -118,10 +118,10 @@ This package supports the following options:
 
 - startdate: Startdate of your work.
   Preferably ISO-8601. See <https://xkcd.com/1179/> and <https://www.explainxkcd.com/wiki/index.php/1179:_ISO_8601>.
-    - `startdate={2012-06-01}`
+    - `startdate={2027-04-01}`
 
 - enddate: Enddate of your work.
-    - `enddate={2012-12-01}`
+    - `enddate={2027-09-30}`
 
 - crk: CR-Classification codes of your work. May be separated by commas:
     - `crk={A.1, A.2}`
